@@ -1,4 +1,5 @@
 using System;
+using Core;
 using UnityEngine;
 
 namespace Player
@@ -23,6 +24,25 @@ namespace Player
 
         private void FixedUpdate()
         {
+            if (GameStateController.Instance.gameState == GameStateController.GameState.Gameplay)
+            {
+                CanMove();
+            }
+            else
+            {
+                rb2d.velocity = Vector2.zero;
+            }
+
+        }
+
+        private void PlayerInputsValues()
+        {
+            movement.x = Input.GetAxisRaw("Horizontal");
+            movement.y = Input.GetAxisRaw("Vertical");
+        }
+
+        private void CanMove()
+        {
             if (testMoveImprove)
             {
                 PlayerMoveImprove();
@@ -31,12 +51,6 @@ namespace Player
             {
                 PlayerMovement(speed);
             }
-        }
-
-        private void PlayerInputsValues()
-        {
-            movement.x = Input.GetAxisRaw("Horizontal");
-            movement.y = Input.GetAxisRaw("Vertical");
         }
 
         private void PlayerMovement(float s)

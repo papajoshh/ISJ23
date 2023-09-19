@@ -1,24 +1,33 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using Core;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class AgentNatComp : MonoBehaviour
+namespace SantaCompana
 {
-
-    [SerializeField] private NavMeshAgent agent;
-    [SerializeField] private Transform player;
-
-    private void Start()
+    public class AgentNatComp : MonoBehaviour
     {
-        agent.updateRotation = false;
-        agent.updateUpAxis = false;
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        agent.SetDestination(player.position);
+        [SerializeField] private NavMeshAgent agent;
+        [SerializeField] private Transform player;
+
+        private void Start()
+        {
+            agent.updateRotation = false;
+            agent.updateUpAxis = false;
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            if (GameStateController.Instance.gameState == GameStateController.GameState.Gameplay)
+            {
+                AgentFollow(player);
+            }
+        }
+
+        private void AgentFollow(Transform target)
+        {
+            agent.SetDestination(target.position);
+        }
     }
 }
