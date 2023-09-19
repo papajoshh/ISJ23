@@ -66,15 +66,14 @@ public class UI_DialogPanel : MonoBehaviour
 
     private void ShowNextDialog()
     {
-        if(currentDialogIndex <= dialogList.Count)
+        if(currentDialogIndex < dialogList.Count)
         {
+            CleanDialog();
+            SetCharacter();
             TypeDialog();
-            currentDialogIndex++;
         }
         else
-        {
             CloseDialog();
-        }
     }
 
 
@@ -84,7 +83,8 @@ public class UI_DialogPanel : MonoBehaviour
 
         IEnumerator Coroutine_TypeDialog()
         {
-            yield return new WaitForSeconds(0.5f);
+            typingText = true;
+            yield return new WaitForSeconds(0.25f);
 
             foreach (var c in dialogList[currentDialogIndex].dialogText)
             {
@@ -92,24 +92,39 @@ public class UI_DialogPanel : MonoBehaviour
                 yield return new WaitForSeconds(1 / characterPerSecond);
             }
 
-            typingText = false;
+            yield return new WaitForSeconds(0.5f);
 
-            if(currentDialogIndex < dialogList.Count)
+            typingText = false;
+            currentDialogIndex++;
+
+            if (currentDialogIndex < dialogList.Count)
                 continueArrow.SetActive(true);
             else
                 continueArrow.SetActive(false);
         }
     }
 
+    private void SetCharacter()
+    {
+        characterPortrait.sprite = dialogList[currentDialogIndex].characterPortrait;
+        characterName.text = dialogList[currentDialogIndex].characterName;
+    }
+
     private void CloseDialog()
     {
+        ResetDialog();
         dialogPanel.SetActive(false);
     }
 
     private void CleanDialog()
     {
-        currentDialogIndex = 0;
         dialogText.text = "";
-        typingText = false;
+        continueArrow.SetActive(false);
+    }
+
+    private void ResetDialog()
+    {
+        CleanDialog();
+        currentDialogIndex = 0;
     }
 }

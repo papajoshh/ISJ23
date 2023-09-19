@@ -10,9 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 822a0a79a6b822b4baefe2b309786cf8, type: 3}
-  m_Name: Test Dialog 2
+  m_Name: Test Dialog 3
   m_EditorClassIdentifier: 
-  characterName: "Ni\xF1a"
-  dialogText: "Tengo espacio suficiente para decir cualquier locura que se me ocurra,
-    \xA1bien!"
-  characterPortrait: {fileID: 21300000, guid: 6b032e82e59f0c847ace36850204858e, type: 3}
+  characterName: Padre
+  dialogText: "\xA1Y adem\xE1s funciona de maravilla!"
+  characterPortrait: {fileID: 21300000, guid: 6bca8c59efec172498368cec7fb4b2b3, type: 3}

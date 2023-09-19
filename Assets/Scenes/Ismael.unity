@@ -152,6 +152,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e1d832e2c22d6f41ae785522d3538c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogList:
+  - {fileID: 11400000, guid: d96ab4b63e8792149b5df761460d38c7, type: 2}
+  - {fileID: 11400000, guid: 2948efb089432c447beb3df760e227f4, type: 2}
+  - {fileID: 11400000, guid: b4ce7fe11ca8f014fb7d24a5c476fc11, type: 2}
 --- !u!4 &147414824
 Transform:
   m_ObjectHideFlags: 0
@@ -617,7 +621,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1273971708
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1012,11 +1016,11 @@ MonoBehaviour:
   characterPortrait: {fileID: 2055119149}
   dialogPanel: {fileID: 1273971707}
   continueArrow: {fileID: 335941199}
-  kidPortraitSprite: {fileID: 21300000, guid: 6b032e82e59f0c847ace36850204858e, type: 3}
-  fatherPortraitSprite: {fileID: 21300000, guid: 6bca8c59efec172498368cec7fb4b2b3, type: 3}
   characterPerSecond: 60
   characterSFX: {fileID: 0}
-  textFinished: 0
+  dialogList: []
+  currentDialogIndex: 0
+  typingText: 0
 --- !u!1 &2055119147
 GameObject:
   m_ObjectHideFlags: 0
