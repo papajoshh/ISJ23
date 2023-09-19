@@ -13,13 +13,23 @@ namespace Player
         // Update is called once per frame
         void Update()
         {
-            movement.x = Input.GetAxis("Horizontal");
-            movement.y = Input.GetAxis("Vertical");
+            PlayerInputsValues();
         }
 
         private void FixedUpdate()
         {
-            rb2d.MovePosition(rb2d.position + movement * (speed * Time.fixedDeltaTime));
+            PlayerMovement(speed);
+        }
+
+        private void PlayerInputsValues()
+        {
+            movement.x = Input.GetAxis("Horizontal");
+            movement.y = Input.GetAxis("Vertical");
+        }
+
+        private void PlayerMovement(float s)
+        {
+            rb2d.MovePosition(rb2d.position + movement * (s * Time.fixedDeltaTime));
         }
     }
 }
