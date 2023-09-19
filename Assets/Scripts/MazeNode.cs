@@ -24,8 +24,13 @@ public class MazeNode : MonoBehaviour
                 floor.color = Color.cyan;
                 break;
             case NodeState.Completed:
-                floor.color = Color.magenta;
+                floor.color = new Color32(255, 215, 212,255);
                 break;
         }
+    }
+
+    public void RemoveWall(int wallToRemove)
+    {
+        walls[wallToRemove].gameObject.SetActive(false);
     }
 }
