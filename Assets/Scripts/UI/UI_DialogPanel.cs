@@ -87,6 +87,7 @@ public class UI_DialogPanel : MonoBehaviour
             int characterCount = 0;
             yield return new WaitForSeconds(0.25f);
 
+            audiosource.PlayOneShot(voiceSFX);
             foreach (var c in dialogList[currentDialogIndex].dialogText)
             {
                 dialogText.text += c;
