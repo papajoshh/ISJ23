@@ -1,4 +1,5 @@
 using Core;
+using Player;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -12,6 +13,9 @@ namespace SantaCompana
 
         private void Start()
         {
+            agent = GetComponent<NavMeshAgent>();
+            player = FindObjectOfType<SimpleMovement>().gameObject.transform;
+            
             agent.updateRotation = false;
             agent.updateUpAxis = false;
         }
