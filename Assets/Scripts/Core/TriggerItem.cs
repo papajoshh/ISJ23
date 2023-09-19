@@ -8,6 +8,9 @@ namespace Core
 
         [SerializeField] private GameObject prefabToInstantiate;
         [SerializeField] private Transform pos;
+
+        [Header("Obj Exit")] 
+        [SerializeField] private GameObject exitObj;
         
         private void OnTriggerEnter2D(Collider2D col)
         {
@@ -21,6 +24,8 @@ namespace Core
         private void PlayerTakeObject()
         {
             Instantiate(prefabToInstantiate, pos.position, prefabToInstantiate.transform.rotation);
+            //Activamos el objeto que sirve para escapar del laberinto
+            exitObj.SetActive(true);
         }
         
     }
