@@ -274,7 +274,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &335941200
 RectTransform:
   m_ObjectHideFlags: 0
@@ -838,6 +838,7 @@ GameObject:
   - component: {fileID: 1583105095}
   - component: {fileID: 1583105094}
   - component: {fileID: 1583105093}
+  - component: {fileID: 1583105097}
   m_Layer: 5
   m_Name: Dialog Canvas
   m_TagString: Untagged
@@ -928,6 +929,27 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1583105097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583105092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be9fadce9449bb8439cbc3eae53c9253, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: {fileID: 194546462}
+  dialogText: {fileID: 919563394}
+  characterPortrait: {fileID: 2055119149}
+  dialogPanel: {fileID: 1273971707}
+  continueArrow: {fileID: 335941199}
+  kidPortraitSprite: {fileID: 21300000, guid: 6b032e82e59f0c847ace36850204858e, type: 3}
+  fatherPortraitSprite: {fileID: 21300000, guid: 6bca8c59efec172498368cec7fb4b2b3, type: 3}
+  characterPerSecond: 60
+  characterSFX: {fileID: 0}
 --- !u!1 &2055119147
 GameObject:
   m_ObjectHideFlags: 0
