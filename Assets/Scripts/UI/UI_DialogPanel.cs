@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class UI_DialogPanel : MonoBehaviour
 {
     public static UI_DialogPanel instance;
     public enum dialogCharacter { KID, FATHER }
+    public Action onEndDialog;
 
     [Header("[References]")]
     [SerializeField] private AudioSource audiosource;
