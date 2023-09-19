@@ -10,6 +10,7 @@ public class UI_DialogPanel : MonoBehaviour
     public enum dialogCharacter { KID, FATHER }
 
     [Header("[References]")]
+    [SerializeField] private AudioSource audiosource;
     [SerializeField] private TextMeshProUGUI characterName;
     [SerializeField] private TextMeshProUGUI dialogText;
     [SerializeField] private Image characterPortrait;
@@ -18,9 +19,7 @@ public class UI_DialogPanel : MonoBehaviour
 
     [Header("[Configuration]")]
     [SerializeField] private float characterPerSecond;
-    
-    [Header("[Audio]")]
-    [SerializeField] private AudioClip characterSFX;
+    [SerializeField] private float soundPerCharacter;
 
     [Header("[Values]")]
     [SerializeField] private List<DialogScriptable> dialogList;
@@ -79,21 +78,31 @@ public class UI_DialogPanel : MonoBehaviour
 
     private void TypeDialog()
     {
+        AudioClip voiceSFX = dialogList[currentDialogIndex].voiceSFX;
         StartCoroutine(Coroutine_TypeDialog());
 
         IEnumerator Coroutine_TypeDialog()
         {
             typingText = true;
+            int characterCount = 0;
             yield return new WaitForSeconds(0.25f);
 
             foreach (var c in dialogList[currentDialogIndex].dialogText)
             {
                 dialogText.text += c;
+                characterCount++;
                 yield return new WaitForSeconds(1 / characterPerSecond);
+
+                if(characterCount >= soundPerCharacter)
+                {
+                    audiosource.PlayOneShot(voiceSFX);
+                    characterCount = 0;
+                }
             }
 
             yield return new WaitForSeconds(0.5f);
 
+            audiosource.Stop();
             typingText = false;
             currentDialogIndex++;
 
@@ -103,6 +112,7 @@ public class UI_DialogPanel : MonoBehaviour
                 continueArrow.SetActive(false);
         }
     }
+
 
     private void SetCharacter()
     {

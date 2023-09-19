@@ -8,6 +8,7 @@ public class DialogScriptable : ScriptableObject
     [Header("[Values]")]
     public string characterName;
     public string dialogText;
+    public AudioClip voiceSFX;
     public Sprite characterPortrait;
 
 }
