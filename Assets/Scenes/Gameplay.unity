@@ -2078,7 +2078,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6364842330062502082, guid: 59707c9161c2b884985a50f6240b99e0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 22.12
       objectReference: {fileID: 0}
     - target: {fileID: 6364842330062502082, guid: 59707c9161c2b884985a50f6240b99e0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9769,7 +9769,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1126582519}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Script: {fileID: 11500000, guid: e04976799df50f54ba128eff723155a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_AgentTypeID: 0
@@ -9781,16 +9781,15 @@ MonoBehaviour:
     m_Bits: 4294967295
   m_UseGeometry: 0
   m_DefaultArea: 0
-  m_GenerateLinks: 0
   m_IgnoreNavMeshAgent: 1
   m_IgnoreNavMeshObstacle: 1
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.086666666
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 97daa65a7c19d964c9d07603b64972a1, type: 2}
   m_BuildHeightMesh: 0
+  m_HideEditorLogs: 0
+  m_NavMeshData: {fileID: 23800000, guid: 4d2789ec44056dc47bfcb50464c5f295, type: 2}
 --- !u!43 &1176248627
 Mesh:
   m_ObjectHideFlags: 0
@@ -17165,6 +17164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1690175624}
   - component: {fileID: 1690175623}
+  - component: {fileID: 1690175625}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -17233,12 +17233,28 @@ Transform:
   m_GameObject: {fileID: 1690175622}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.4869, y: 5.1523, z: 0}
-  m_LocalScale: {x: 40.317608, y: 38.48507, z: 29.001558}
+  m_LocalPosition: {x: 3.8079, y: 4.3821, z: 0}
+  m_LocalScale: {x: 30.091312, y: 31.292088, z: 29.001558}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2131041394}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1690175625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690175622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 0
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!43 &1724250646
 Mesh:
   m_ObjectHideFlags: 0
