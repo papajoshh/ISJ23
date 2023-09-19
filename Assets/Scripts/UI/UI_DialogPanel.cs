@@ -17,12 +17,15 @@ public class UI_DialogPanel : MonoBehaviour
     [SerializeField] private GameObject continueArrow;
 
     [Header("[Configuration]")]
-    [SerializeField] private Sprite kidPortraitSprite;
-    [SerializeField] private Sprite fatherPortraitSprite;
     [SerializeField] private float characterPerSecond;
     
     [Header("[Audio]")]
-    [SerializeField] private AudioClip characterSFX; 
+    [SerializeField] private AudioClip characterSFX;
+
+    [Header("[Values]")]
+    [SerializeField] private List<DialogScriptable> dialogList;
+    [SerializeField] private int currentDialogIndex;
+    [SerializeField] private bool typingText;
 
 
     private void Awake()
@@ -43,38 +46,70 @@ public class UI_DialogPanel : MonoBehaviour
     }
 
 
-    public void ShowDialog(dialogCharacter character, string newDialogText)
+    private void Update()
     {
-        dialogPanel.SetActive(true);
-        SetCharacter(character);
-        TypeDialog(newDialogText);
+        if(Input.GetKeyDown(KeyCode.Space) && typingText == false)
+        {
+            ShowNextDialog();
+        }
     }
 
-    private void TypeDialog(string newDialogText)
+
+    public void ShowDialog(List<DialogScriptable> newDialogList)
+    {
+        CleanDialog();
+        dialogList = newDialogList;
+        dialogPanel.SetActive(true);
+
+        ShowNextDialog();
+    }
+
+    private void ShowNextDialog()
+    {
+        if(currentDialogIndex <= dialogList.Count)
+        {
+            TypeDialog();
+            currentDialogIndex++;
+        }
+        else
+        {
+            CloseDialog();
+        }
+    }
+
+
+    private void TypeDialog()
     {
         StartCoroutine(Coroutine_TypeDialog());
 
         IEnumerator Coroutine_TypeDialog()
         {
-            foreach (var c in newDialogText)
+            yield return new WaitForSeconds(0.5f);
+
+            foreach (var c in dialogList[currentDialogIndex].dialogText)
             {
                 dialogText.text += c;
                 yield return new WaitForSeconds(1 / characterPerSecond);
             }
+
+            typingText = false;
+
+            if(currentDialogIndex < dialogList.Count)
+                continueArrow.SetActive(true);
+            else
+                continueArrow.SetActive(false);
         }
     }
 
-    private void SetCharacter(dialogCharacter character)
+    private void CloseDialog()
     {
-        switch (character)
-        {
-            case dialogCharacter.KID:
-                characterPortrait.sprite = kidPortraitSprite;
-                break;
-            case dialogCharacter.FATHER:
-                characterPortrait.sprite = fatherPortraitSprite;
-                break;
-        }
+        dialogPanel.SetActive(false);
     }
 
+    private void CleanDialog()
+    {
+        currentDialogIndex = 0;
+        dialogText.text = "";
+        typingText = false;
+    }
 }

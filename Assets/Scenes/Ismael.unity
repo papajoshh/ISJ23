@@ -123,6 +123,50 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &147414822
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 147414824}
+  - component: {fileID: 147414823}
+  m_Layer: 0
+  m_Name: Test
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &147414823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147414822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e1d832e2c22d6f41ae785522d3538c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &147414824
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147414822}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &194546460
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,6 +312,7 @@ GameObject:
   - component: {fileID: 335941200}
   - component: {fileID: 335941202}
   - component: {fileID: 335941201}
+  - component: {fileID: 335941203}
   m_Layer: 5
   m_Name: Continue Arrow
   m_TagString: Untagged
@@ -332,6 +377,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 335941199}
   m_CullTransparentMesh: 1
+--- !u!95 &335941203
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335941199}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d4078310e5381b14fa73112e3c8d1d69, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &919563392
 GameObject:
   m_ObjectHideFlags: 0
@@ -950,6 +1016,7 @@ MonoBehaviour:
   fatherPortraitSprite: {fileID: 21300000, guid: 6bca8c59efec172498368cec7fb4b2b3, type: 3}
   characterPerSecond: 60
   characterSFX: {fileID: 0}
+  textFinished: 0
 --- !u!1 &2055119147
 GameObject:
   m_ObjectHideFlags: 0
@@ -1032,3 +1099,4 @@ SceneRoots:
   - {fileID: 1319217418}
   - {fileID: 1583105096}
   - {fileID: 1137593797}
+  - {fileID: 147414824}

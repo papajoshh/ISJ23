@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class Test_ShowDialog : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public List<DialogScriptable> dialogList; 
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            UI_DialogPanel.instance.ShowDialog(dialogList);
+        }
     }
 }
