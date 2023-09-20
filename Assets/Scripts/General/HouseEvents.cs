@@ -5,40 +5,33 @@ using UnityEngine;
 public class HouseEvents : MonoBehaviour
 {
     [Header("[References]")]
-    [SerializeField] private House_Phase1 housePhase1;
-    [SerializeField] private House_Phase2 housePhase2;
-    [SerializeField] private House_Phase3 housePhase3;
-    [SerializeField] private House_Phase4 housePhase4;
+    [SerializeField] private GameObject housePhase1;
+    [SerializeField] private GameObject housePhase2;
+    [SerializeField] private GameObject housePhase3;
+    [SerializeField] private GameObject housePhase4;
 
 
-    private void Start()
+    private void Awake()
     {
         PlayNextEvent();
     }
 
     private void PlayNextEvent()
     {
-        StartCoroutine(Coroutine_PlayNextEvent());
-
-        IEnumerator Coroutine_PlayNextEvent()
+        switch (StaticData.gamePhase)
         {
-            yield return new WaitForSeconds(1);
-
-            switch (StaticData.instance.gamePhase)
-            {
-                case 1:
-                    housePhase1.Play_Event();
-                    break;
-                case 2:
-                    housePhase2.Play_Event();
-                    break;
-                case 3:
-                    housePhase3.Play_Event();
-                    break;
-                case 4:
-                    housePhase4.Play_Event();
-                    break;
-            }
+            case 0:
+                housePhase1.SetActive(true);
+                break;
+            case 1:
+                housePhase2.SetActive(true);
+                break;
+            case 2:
+                housePhase3.SetActive(true);
+                break;
+            case 3:
+                housePhase4.SetActive(true);
+                break;
         }
     }
 
