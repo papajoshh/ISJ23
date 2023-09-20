@@ -27,6 +27,7 @@ public class UI_DialogPanel : MonoBehaviour
     [SerializeField] private List<DialogScriptable> dialogList;
     [SerializeField] private int currentDialogIndex;
     [SerializeField] private bool typingText;
+    [SerializeField] private bool onDialog;
 
 
     private void Awake()
@@ -49,7 +50,7 @@ public class UI_DialogPanel : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space) && typingText == false)
+        if(Input.GetKeyDown(KeyCode.Space) && onDialog == true && typingText == false)
         {
             ShowNextDialog();
         }
@@ -58,9 +59,9 @@ public class UI_DialogPanel : MonoBehaviour
 
     public void ShowDialog(List<DialogScriptable> newDialogList)
     {
-        CleanDialog();
         dialogList = newDialogList;
         dialogPanel.SetActive(true);
+        onDialog = true;
 
         ShowNextDialog();
     }
@@ -125,7 +126,10 @@ public class UI_DialogPanel : MonoBehaviour
 
     private void CloseDialog()
     {
-        ResetDialog();
+        onDialog = false;
+        currentDialogIndex = 0;
+
+        onEndDialog.Invoke();
         dialogPanel.SetActive(false);
     }
 
@@ -135,9 +139,4 @@ public class UI_DialogPanel : MonoBehaviour
         continueArrow.SetActive(false);
     }
 
-    private void ResetDialog()
-    {
-        CleanDialog();
-        currentDialogIndex = 0;
-    }
 }
