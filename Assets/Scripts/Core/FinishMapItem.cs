@@ -12,6 +12,7 @@ namespace Core
         {
             if (col.gameObject.CompareTag("Player"))
             {
+                StaticData.gamePhase++;
                 SceneManager.LoadScene(sceneName);
             }
         }
