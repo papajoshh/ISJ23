@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Gameplay Casa.unity
     guid: 09f12f1a2d4683542aa6f66c08e549c6
   - enabled: 1
-    path: Assets/Scenes/Gameplay Bosque.unity
+    path: Assets/Scenes/Gameplay Bosque_OLD.unity
     guid: e87873fdb385e9246b71c3399b7dcd5c
   - enabled: 1
     path: Assets/Scenes/Ismael/Ismael.unity

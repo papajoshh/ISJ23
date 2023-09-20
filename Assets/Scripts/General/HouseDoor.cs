@@ -37,6 +37,6 @@ public class HouseDoor : MonoBehaviour
     {
         UI_FadeCanvas.instance.Play_FadeIn();
         yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene("Gameplay Test Ismael");
+        SceneManager.LoadScene("Gameplay");
     }
 }
