@@ -1,4 +1,5 @@
 using System;
+using GameEventsTestJose;
 using UnityEngine;
 
 namespace Core
@@ -6,11 +7,13 @@ namespace Core
     public class TriggerItem : MonoBehaviour
     {
 
-        [SerializeField] private GameObject prefabToInstantiate;
-        [SerializeField] private Transform pos;
+
 
         [Header("Obj Exit")] 
         [SerializeField] private GameObject exitObj;
+
+        [Header("Events")] 
+        [SerializeField] private GameEvent onTriggerEnemy;
         
         private void OnTriggerEnter2D(Collider2D col)
         {
@@ -23,7 +26,7 @@ namespace Core
 
         private void PlayerTakeObject()
         {
-            Instantiate(prefabToInstantiate, pos.position, prefabToInstantiate.transform.rotation);
+            onTriggerEnemy.Raise();
             //Activamos el objeto que sirve para escapar del laberinto
             exitObj.SetActive(true);
         }

@@ -169,6 +169,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 3212309659260111966}
   player: {fileID: 0}
+  distanceMinPlayer: 5
+  normalSpeed: 2
+  initialDSpeed: 6
 --- !u!114 &4731532798857551199
 MonoBehaviour:
   m_ObjectHideFlags: 0
