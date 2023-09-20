@@ -7,18 +7,26 @@ namespace SantaCompana
 {
     public class AgentNatComp : MonoBehaviour
     {
-
+        [Header("Components")]
         [SerializeField] private NavMeshAgent agent;
         [SerializeField] private Transform player;
+        [SerializeField] private GameObject[] newDestinationsArray;
+        private GameObject newDestinationNav;
 
+        [Header("Values")]
         [SerializeField] private float distanceMinPlayer;
         [SerializeField] private float normalSpeed;
+        [SerializeField] private float newDestinationSpeed;
         [SerializeField] private float initialDSpeed;
+
+        [Header("Player follow check")]
+        [SerializeField] private bool followPlayer;
 
         private void Start()
         {
             agent = GetComponent<NavMeshAgent>();
             player = FindObjectOfType<SimpleMovement>().gameObject.transform;
+            newDestinationsArray = GameObject.FindGameObjectsWithTag("Destination");
             
             agent.updateRotation = false;
             agent.updateUpAxis = false;
@@ -29,8 +37,22 @@ namespace SantaCompana
         {
             if (GameStateController.Instance.gameState == GameStateController.GameState.Gameplay)
             {
-                AgentFollow(player);
+                AgentFollow(EnemyDestination());
                 AgentDistance(player);
+            }
+            
+            ChangeAgentSpeed();
+        }
+
+        private void ChangeAgentSpeed()
+        {
+            if (!followPlayer)
+            {
+                agent.speed = newDestinationSpeed;
+            }
+            else
+            {
+                agent.speed = normalSpeed;
             }
         }
 
@@ -44,6 +66,27 @@ namespace SantaCompana
             float distance = Vector3.Distance(this.gameObject.transform.position, target.transform.position);
 
             agent.speed = distance >= distanceMinPlayer ? initialDSpeed : normalSpeed;
+        }
+
+        private Transform EnemyDestination()
+        {
+            if (followPlayer)
+            {
+                return player.transform;
+            }
+
+            //TODO Quizas meter un random de dos o tres destinos
+            return newDestinationNav.transform;
+        }
+
+        public void SetANewDestination()
+        {
+            newDestinationNav = newDestinationsArray[Random.Range(0, newDestinationsArray.Length)];
+        }
+
+        public void ChangeFollowBoolValue()
+        {
+            followPlayer =! followPlayer;
         }
     }
 }

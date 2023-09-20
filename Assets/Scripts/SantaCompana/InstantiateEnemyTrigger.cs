@@ -13,6 +13,5 @@ namespace SantaCompana
             Instantiate(prefabToInstantiate, pos.position, prefabToInstantiate.transform.rotation);
         }
         
-        
     }
 }

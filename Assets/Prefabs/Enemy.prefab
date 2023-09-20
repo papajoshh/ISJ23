@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 690600766442201416}
   - component: {fileID: 8838663893624831308}
   - component: {fileID: 4731532798857551199}
+  - component: {fileID: 400096124053607891}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -169,9 +170,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 3212309659260111966}
   player: {fileID: 0}
+  newDestinationsArray: []
   distanceMinPlayer: 5
   normalSpeed: 2
+  newDestinationSpeed: 1
   initialDSpeed: 6
+  followPlayer: 1
 --- !u!114 &4731532798857551199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,3 +188,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6f9ceb90c59ef44088252eb179c53ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &400096124053607891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8551529453423122969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae5ab44c0656ce34a860aec33046e1b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 790d02037cd098540ab2060766663767, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8838663893624831308}
+        m_TargetAssemblyTypeName: SantaCompana.AgentNatComp, Assembly-CSharp
+        m_MethodName: ChangeFollowBoolValue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8838663893624831308}
+        m_TargetAssemblyTypeName: SantaCompana.AgentNatComp, Assembly-CSharp
+        m_MethodName: SetANewDestination
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
