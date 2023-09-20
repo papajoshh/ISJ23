@@ -24,12 +24,11 @@ public class Player_Interactor : MonoBehaviour
     {
         if (instance != null && instance != this)
         {
-            Destroy(this.gameObject);
+            Destroy(this);
         }
         else
         {
             instance = this;
-            DontDestroyOnLoad(this.gameObject);
         }
     }
 
