@@ -73,7 +73,7 @@ namespace Player
 
         private void PlayerMoveImprove()
         {
-            Vector2 targetSpeed = new Vector2(movement.x, movement.y) * speed;
+            Vector2 targetSpeed = new Vector2(movement.x, movement.y).normalized * speed;
             Vector2 accelRate = new Vector2((Mathf.Abs(targetSpeed.x) > 0.01f) ? runAccelAmount : runDeccelAmount,
                 (Mathf.Abs(targetSpeed.y) > 0.01f) ? runAccelAmount : runDeccelAmount);
             Vector2 speedDif = new Vector2(targetSpeed.x - rb2d.velocity.x, targetSpeed.y - rb2d.velocity.y);

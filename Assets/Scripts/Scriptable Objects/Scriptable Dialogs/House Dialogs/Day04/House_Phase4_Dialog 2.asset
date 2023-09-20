@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: House_Phase4_Dialog 2
   m_EditorClassIdentifier: 
   characterName: Hija
-  dialogText: Se veia de lejos papa, eres tontisimo
+  dialogText: "Ni hablar papa! No dejar\xE9 que te vayas, no mientras yo siga aqu\xED!"
   voiceSFX: {fileID: 8300000, guid: cadea0e4396fc2d46b0cae88c0df656e, type: 3}
   characterPortrait: {fileID: 21300000, guid: 6b032e82e59f0c847ace36850204858e, type: 3}

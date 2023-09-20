@@ -22,7 +22,7 @@ public class HouseDoor : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("Gameplay Bosque");
+            StartCoroutine(FadeInConversationCorroutine());
         }
     }
 
@@ -31,5 +31,12 @@ public class HouseDoor : MonoBehaviour
         UI_DialogPanel.instance.onEndDialog -= OnEndDialog;
         Core.GameStateController.Instance.ChangeGameStateTo(Core.GameStateController.GameState.Gameplay);
         Player_Interactor.instance.EnableInteracting();
+    }
+
+    IEnumerator FadeInConversationCorroutine()
+    {
+        UI_FadeCanvas.instance.Play_FadeIn();
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene("Gameplay Bosque");
     }
 }

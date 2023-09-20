@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,8 +24,12 @@ public class UI_FadeCanvas : MonoBehaviour
         else
         {
             instance = this;
-            DontDestroyOnLoad(this.gameObject);
         }
+    }
+
+    private void Start()
+    {
+        Play_FadeOut();
     }
 
 

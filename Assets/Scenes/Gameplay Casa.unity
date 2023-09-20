@@ -2535,15 +2535,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   houseDoor: {fileID: 2043832260}
   phase1_Dialog:
+  - {fileID: 11400000, guid: eed8eb5517280a34dbb3115d998a99d0, type: 2}
   - {fileID: 11400000, guid: 51d8cabdd021e014d9f5ccc207a02dee, type: 2}
   - {fileID: 11400000, guid: 77907391df80b2c479c3d5d8313183b3, type: 2}
   - {fileID: 11400000, guid: a56bf18e3b27762448bab611cd45ebd5, type: 2}
+  - {fileID: 11400000, guid: df5167009641aec42bee213bc22bb631, type: 2}
+  - {fileID: 11400000, guid: d1e267d68ec42f94f9a73f31bcbeeb82, type: 2}
+  - {fileID: 11400000, guid: 0796bdf2c9d967943870d18c516ce714, type: 2}
   phase2_Dialog:
+  - {fileID: 11400000, guid: 2c5a95d414c5cc3469f8028fc7be589e, type: 2}
   - {fileID: 11400000, guid: 8da6bfb4c9e50d94b96bb8b381c55c9f, type: 2}
   - {fileID: 11400000, guid: c039735ad50768e4a89532875ad4817c, type: 2}
+  - {fileID: 11400000, guid: 16352834af0a43348828bf6e17ebcc66, type: 2}
+  - {fileID: 11400000, guid: 5690114e35ce9574081afeddc8b4a060, type: 2}
   phase3_Dialog:
   - {fileID: 11400000, guid: 26f761591fc3e944a93aece940e0cb87, type: 2}
   - {fileID: 11400000, guid: 519a9286f59ebbb4d8562c63a7543220, type: 2}
+  - {fileID: 11400000, guid: bdf8fb055cb1c0842aa13279ee26f3e2, type: 2}
+  - {fileID: 11400000, guid: dfa9ad70cb17eeb488dfc2a52061541e, type: 2}
+  - {fileID: 11400000, guid: 88bd3c49586fdef4381e1ef25fbd9b02, type: 2}
+  - {fileID: 11400000, guid: 1d92beed906484b48b04f264e2084ecc, type: 2}
   phase4_Dialog:
   - {fileID: 11400000, guid: db1473a87587a074ea505b81cb6d1583, type: 2}
   - {fileID: 11400000, guid: 87dd1f515789afe44b8d4cd092b55d07, type: 2}
@@ -2784,10 +2795,6 @@ PrefabInstance:
     - target: {fileID: 6183917338614377028, guid: ec5c59ab60a233b4794ea3a738c734b8, type: 3}
       propertyPath: m_Name
       value: Fade Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 6183917338614377028, guid: ec5c59ab60a233b4794ea3a738c734b8, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
