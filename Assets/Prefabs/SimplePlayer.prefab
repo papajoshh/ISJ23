@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 718077845781418169}
   - component: {fileID: 5346281066659367274}
   - component: {fileID: 6240083109538405428}
+  - component: {fileID: 3963165098804656424}
   m_Layer: 0
   m_Name: SimplePlayer
   m_TagString: Player
@@ -175,4 +176,22 @@ MonoBehaviour:
   speed: 3
   runAccelAmount: 6
   runDeccelAmount: 10
+  faceDirection: {x: 0, y: 0}
   testMoveImprove: 1
+--- !u!114 &3963165098804656424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5592392813738289931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17e1ecd1b97649a478b8e569893a2d20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMovement: {fileID: 6240083109538405428}
+  interactableLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  rayLenght: 0.75

@@ -13,6 +13,8 @@ namespace Player
         [SerializeField] private float runAccelAmount;
         [SerializeField] private float runDeccelAmount;
 
+        public Vector2 faceDirection;
+
         [Header("Test move with force")]
         public bool testMoveImprove;
 
@@ -39,6 +41,12 @@ namespace Player
         {
             movement.x = Input.GetAxisRaw("Horizontal");
             movement.y = Input.GetAxisRaw("Vertical");
+
+            if(movement != Vector2.zero)
+            {
+                faceDirection.x = movement.x;
+                faceDirection.y = movement.y;
+            }
         }
 
         private void CanMove()
@@ -73,7 +81,6 @@ namespace Player
             
             rb2d.AddForce(rate, ForceMode2D.Force);
         }
-
         
     }
 }
