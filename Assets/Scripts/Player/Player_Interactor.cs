@@ -39,7 +39,6 @@ public class Player_Interactor : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space) && GameStateController.Instance.gameState == GameStateController.GameState.Gameplay)
             {
-                interacting = true;
                 Interact();
             }
         }
@@ -52,7 +51,10 @@ public class Player_Interactor : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(gameObject.transform.position, facingDirection, rayLenght, interactableLayer);
 
         if(hit.collider != null)
+        {
+            interacting = true;
             hit.transform.gameObject.GetComponent<IInteractable>().Interact();
+        }
 
         Debug.DrawLine(transform.position, transform.position + (facingDirection * rayLenght), Color.red);
     }

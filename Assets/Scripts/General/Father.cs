@@ -13,6 +13,11 @@ public class Father : MonoBehaviour, IInteractable
     [SerializeField] private List<DialogScriptable> phase3_Dialog;
     [SerializeField] private List<DialogScriptable> phase4_Dialog;
 
+    private void Start()
+    {
+        Debug.Log("La fase del juego actual es:" + StaticData.gamePhase);
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.F1))
