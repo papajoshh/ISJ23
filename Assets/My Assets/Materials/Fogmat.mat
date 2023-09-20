@@ -54,10 +54,10 @@ Material:
     m_Ints: []
     m_Floats:
     - _EnableExternalAlpha: 0
-    - _Fog_power: 0.33
-    - _Fog_scale: 2.4
-    - _Fog_speed: 0.15
-    - _Fog_transparency: 0.32
+    - _Fog_power: 0.35
+    - _Fog_scale: 4.5
+    - _Fog_speed: 0.063
+    - _Fog_transparency: 0.6
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
