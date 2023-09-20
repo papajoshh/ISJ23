@@ -1,6 +1,6 @@
 using System;
 using System.Collections;
-using GameEventsTestJose;
+using GameEvents;
 using UnityEngine;
 
 namespace Core

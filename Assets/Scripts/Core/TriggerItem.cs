@@ -1,5 +1,5 @@
 using System;
-using GameEventsTestJose;
+using GameEvents;
 using UnityEngine;
 
 namespace Core

@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using GameEvents;
 using UnityEngine;
-using GameEventsTestJose;
 
 public class Test_TriggerColorRed : MonoBehaviour
 {

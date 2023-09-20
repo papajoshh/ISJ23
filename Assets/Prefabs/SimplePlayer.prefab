@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5346281066659367274}
   - component: {fileID: 6240083109538405428}
   - component: {fileID: 3963165098804656424}
+  - component: {fileID: 8847671326644237096}
   m_Layer: 0
   m_Name: SimplePlayer
   m_TagString: Player
@@ -172,8 +173,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43b399c2d95f444dabe70fbfa77ad24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb2d: {fileID: 5346281066659367274}
   speed: 3
+  normalSpeed: 0
+  rb2d: {fileID: 5346281066659367274}
   runAccelAmount: 6
   runDeccelAmount: 10
   faceDirection: {x: 0, y: 0}
@@ -195,3 +197,19 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   rayLenght: 0.75
+  interacting: 0
+--- !u!114 &8847671326644237096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5592392813738289931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebe73b8047159fc498f8af0a81eb71bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMovement: {fileID: 6240083109538405428}
+  runSpeed: 6
+  sprintCooldown: 2

@@ -8,8 +8,9 @@ namespace Player
     {
         private Vector2 movement;
 
+        public float speed;
+        public float normalSpeed;
         [SerializeField] private Rigidbody2D rb2d;
-        [SerializeField] private float speed;
         [SerializeField] private float runAccelAmount;
         [SerializeField] private float runDeccelAmount;
 
@@ -17,6 +18,11 @@ namespace Player
 
         [Header("Test move with force")]
         public bool testMoveImprove;
+
+        private void Start()
+        {
+            normalSpeed = speed;
+        }
 
         // Update is called once per frame
         void Update()
