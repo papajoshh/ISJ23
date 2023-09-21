@@ -28,7 +28,6 @@ namespace Player
         private void Update()
         {
             SprintSkill();
-            Debug.Log(timePlayerCanSprint);
 
             if (TimePlayerCanSprint >= sprintCooldown)
             {
