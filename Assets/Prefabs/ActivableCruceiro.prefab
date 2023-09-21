@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 1764896836842333417}
   m_Layer: 0
   m_Name: ActivableCruceiro
-  m_TagString: Untagged
+  m_TagString: Cruceiro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -240,6 +240,7 @@ Transform:
   m_LocalScale: {x: 0.81439, y: 0.81439, z: 0.81439}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2802146392133196180}
   - {fileID: 131295228607044975}
   - {fileID: 5782632169645266670}
   - {fileID: 6016803352803246818}
@@ -305,6 +306,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cruceiro: {fileID: 1515036716701305258}
   cruceiroEvent: {fileID: 11400000, guid: 790d02037cd098540ab2060766663767, type: 2}
+--- !u!1 &7402546105069726777
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2802146392133196180}
+  m_Layer: 0
+  m_Name: SafeZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2802146392133196180
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7402546105069726777}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5011665208027258490}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9085781579859621556
 GameObject:
   m_ObjectHideFlags: 0
