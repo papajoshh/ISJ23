@@ -20,14 +20,6 @@ namespace Player
             }
         }
 
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.H))
-            {
-                PlayerDeadFunction();
-            }
-        }
-
         public void PlayerDeadFunction()
         {
             
