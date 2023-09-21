@@ -794,13 +794,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   globalLight: {fileID: 865207911}
   playerLight: {fileID: 1323332507}
-  lightFadeSpeed: 0.1
+  lightFadeSpeed: 0.5
   initialColor: {r: 1, g: 1, b: 1, a: 1}
   dayColors:
   - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 0.754717, g: 0.57726735, b: 0.35243857, a: 1}
-  - {r: 0.21119614, g: 0.26007208, b: 0.3962264, a: 1}
-  - {r: 0.03529412, g: 0.039215688, b: 0.06666667, a: 1}
+  - {r: 0.3615611, g: 0.45037758, b: 0.6132076, a: 1}
+  - {r: 0.16260235, g: 0.22408235, b: 0.3962264, a: 1}
+  - {r: 0.030704873, g: 0.038659215, b: 0.09433961, a: 1}
   currentStep: 0
   currentColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &992452407
@@ -9233,8 +9233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4bd0f1515c82b641a6d3289f7644837, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerLight: {fileID: 1323332507}
-  globalLight: {fileID: 865207910}
+  lightManager: {fileID: 963368633}
   dayTime: {fileID: 1111244582}
   nightTime: {fileID: 1356253003}
   plantsNeeded: 4

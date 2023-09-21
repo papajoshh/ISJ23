@@ -7,8 +7,7 @@ using GameEvents;
 public class MazeManager : MonoBehaviour
 {
     [Header("[References]")]
-    [SerializeField] private GameObject playerLight;
-    [SerializeField] private GameObject globalLight;
+    [SerializeField] private LightManager lightManager;
     [SerializeField] private GameObject dayTime;
     [SerializeField] private GameObject nightTime;
 
@@ -30,33 +29,18 @@ public class MazeManager : MonoBehaviour
     public void OnPlantObtained()
     {
         plantsObtained++;
-        GetDarker();
-    }
+        lightManager.Darken();
 
-
-    public void GetDarker()
-    {
-        switch (plantsObtained)
+        if(plantsObtained == plantsNeeded -1)
         {
-            case 1:
-                Debug.Log("Se hace un poco más de noche");
-                break;
-            case 2:
-                Debug.Log("Se hace un poco más de noche");
-                break;
-            case 3:
-                dayTime.SetActive(false);
-                nightTime.SetActive(true);
-                spawnEnemy.Raise();
-
-                playerLight.SetActive(true);
-                //globalLight.SetActive(true);
-                //Esto esta hecho a lo bruto, hay que hacerlo poco a poco
-                //eventoNoche.Raise();
-                break;
+            dayTime.SetActive(false);
+            nightTime.SetActive(true);
+            spawnEnemy.Raise();
         }
-
     }
+
+
+    
 
     //public void OnEndMaze()
     //{

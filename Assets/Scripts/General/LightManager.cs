@@ -29,17 +29,30 @@ public class LightManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F1))
             Darken();
 
-        while(currentColor != dayColors[currentStep] || Input.GetKeyDown(KeyCode.F2))
+        if(currentColor != dayColors[currentStep])
         {
             currentColor = Color.Lerp(currentColor, dayColors[currentStep], Time.deltaTime * lightFadeSpeed);
             globalLight.color = currentColor;
+
+            if (currentStep == dayColors.Length - 1)
+                ActivatePlayerLight();
+        }
+
+        if(currentStep == dayColors.Length - 1)
+        {
+            globalLight.intensity -= Time.deltaTime * lightFadeSpeed / 4;
         }
     }
 
     public void Darken()
     {
-        if(currentStep < 3)
+        if(currentStep < dayColors.Length -1)
             currentStep++;
+    }
+
+    public void ActivatePlayerLight()
+    {
+        playerLight.SetActive(true);
     }
 
     private void ResetLight()
