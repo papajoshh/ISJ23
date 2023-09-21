@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Core;
+using GameEvents;
 
 public class MazeManager : MonoBehaviour
 {
@@ -10,7 +11,13 @@ public class MazeManager : MonoBehaviour
     [SerializeField] private GameObject nightTime;
 
     [Header("[Configuration]")]
-    [SerializeField] private List<DialogScriptable> endMazeDialog;
+    [SerializeField] private int plantsNeeded;
+
+    [Header("[Events]")]
+    [SerializeField] private GameEvent spawnEnemy;
+
+    [Header("[Values]")]
+    [SerializeField] private int plantsObtained;
 
 
     private void Start()
@@ -18,40 +25,58 @@ public class MazeManager : MonoBehaviour
         Player_DropBread.instance.RestoreBreadAmount();
     }
 
-    public void OnEndMaze()
+    public void OnPlantObtained()
     {
-        UI_DialogPanel.instance.onEndDialog += OnEndMazeDialog;
-        GameStateController.Instance.ChangeGameStateTo(GameStateController.GameState.Pause);
-        
-        StartCoroutine(Coroutine_OnEndMaze());
+        plantsObtained++;
+        GetDarker();
+    }
 
-        IEnumerator Coroutine_OnEndMaze()
+
+    public void GetDarker()
+    {
+        switch (plantsObtained)
         {
-            UI_FadeCanvas.instance.Play_FadeIn();
-            yield return new WaitForSeconds(3);
-
-            UI_DialogPanel.instance.ShowDialog(endMazeDialog);
+            case 1:
+                Debug.Log("Se hace un poco más de noche");
+                break;
+            case 2:
+                dayTime.SetActive(false);
+                nightTime.SetActive(true);
+                spawnEnemy.Raise();
+                //eventoNoche.Raise();
+                break;
         }
+
     }
 
-    private void OnEndMazeDialog()
-    {
-        UI_DialogPanel.instance.onEndDialog -= OnEndMazeDialog;
-        StartCoroutine(Coroutine_OnEndMazeDialog());
+    //public void OnEndMaze()
+    //{
+    //    UI_DialogPanel.instance.onEndDialog += OnEndMazeDialog;
+    //    GameStateController.Instance.ChangeGameStateTo(GameStateController.GameState.Pause);
 
-        IEnumerator Coroutine_OnEndMazeDialog()
-        {
-            SetNight();
-            UI_FadeCanvas.instance.Play_FadeOut();
-            yield return new WaitForSeconds(2);
+    //    StartCoroutine(Coroutine_OnEndMaze());
 
-            GameStateController.Instance.ChangeGameStateTo(GameStateController.GameState.Gameplay);
-        }
-    }
+    //    IEnumerator Coroutine_OnEndMaze()
+    //    {
+    //        UI_FadeCanvas.instance.Play_FadeIn();
+    //        yield return new WaitForSeconds(3);
 
-    public void SetNight()
-    {
-        dayTime.SetActive(false);
-        nightTime.SetActive(true);
-    }
+    //        UI_DialogPanel.instance.ShowDialog(endMazeDialog);
+    //    }
+    //}
+
+    //private void OnEndMazeDialog()
+    //{
+    //    UI_DialogPanel.instance.onEndDialog -= OnEndMazeDialog;
+    //    StartCoroutine(Coroutine_OnEndMazeDialog());
+
+    //    IEnumerator Coroutine_OnEndMazeDialog()
+    //    {
+    //        SetNight();
+    //        UI_FadeCanvas.instance.Play_FadeOut();
+    //        yield return new WaitForSeconds(2);
+
+    //        GameStateController.Instance.ChangeGameStateTo(GameStateController.GameState.Gameplay);
+    //    }
+    //}
 }
