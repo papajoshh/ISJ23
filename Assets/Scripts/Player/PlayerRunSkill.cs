@@ -18,7 +18,8 @@ namespace Player
         [SerializeField] private float sprintCooldown;
 
         private bool canSprint;
-
+        public bool isOnMug;
+        
         private void Start()
         {
             canSprint = true;
@@ -51,10 +52,19 @@ namespace Player
                 }
 
             }
-            else
+            else//perdón
             {
-                playerMovement.speed = playerMovement.normalSpeed;
-                TimePlayerCanSprint -= Time.deltaTime;
+                if (!isOnMug)
+                {
+                    playerMovement.speed = playerMovement.normalSpeed;
+                    TimePlayerCanSprint -= Time.deltaTime;
+                }
+                else
+                {
+                    playerMovement.speed = 0.5f;
+                    TimePlayerCanSprint -= Time.deltaTime;
+                }
+ 
             }
         }
     }
