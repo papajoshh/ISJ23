@@ -172,7 +172,7 @@ MonoBehaviour:
   player: {fileID: 0}
   newDestinationsArray: []
   distanceMinPlayer: 5
-  normalSpeed: 1.65
+  normalSpeed: 1.75
   newDestinationSpeed: 1
   initialDSpeed: 6
   followPlayer: 1
