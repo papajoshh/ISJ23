@@ -7,6 +7,7 @@ public class LightManager : MonoBehaviour
 {
     [Header("[References]")]
     [SerializeField] private Light2D globalLight;
+    [SerializeField] private GameObject fog;
     [SerializeField] private GameObject playerLight;
 
     [Header("[Configuration]")]
@@ -53,6 +54,7 @@ public class LightManager : MonoBehaviour
     public void ActivatePlayerLight()
     {
         playerLight.SetActive(true);
+        fog.SetActive(true);
     }
 
     private void ResetLight()
