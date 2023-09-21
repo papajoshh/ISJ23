@@ -9,6 +9,8 @@ public class ColorChanger : MonoBehaviour
     public Color[] colores;
     Color currentColor;
     public float step;
+    
+    
     // Start is called before the first frame update
     void Start()
     {

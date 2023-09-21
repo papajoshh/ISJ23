@@ -537,9 +537,8 @@ GameObject:
   m_Component:
   - component: {fileID: 865207912}
   - component: {fileID: 865207911}
-  - component: {fileID: 865207913}
   m_Layer: 0
-  m_Name: Light 2D
+  m_Name: Global Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -561,7 +560,7 @@ MonoBehaviour:
   m_LightType: 4
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.21150768, g: 0.21910916, b: 0.46226418, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
@@ -603,30 +602,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 865207910}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.71545565, y: 1.3692905, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 963368632}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &865207913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 865207910}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c50d0d8c5bf8d149ad29f08b72ab7f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  luz: {fileID: 865207911}
-  colores:
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 0.754717, g: 0.45757318, b: 0.13100746, a: 1}
-  step: 0
 --- !u!1001 &957869905
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -765,6 +747,62 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1431428663932933521, guid: 75cbf139f5ff58a46a7b5272e6a673d9, type: 3}
   m_PrefabInstance: {fileID: 957869905}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &963368631
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 963368632}
+  - component: {fileID: 963368633}
+  m_Layer: 0
+  m_Name: Light Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &963368632
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963368631}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 865207912}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &963368633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963368631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f72a765c3689c7141aad17e8445dde4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  globalLight: {fileID: 865207911}
+  playerLight: {fileID: 1323332507}
+  lightFadeSpeed: 0.1
+  initialColor: {r: 1, g: 1, b: 1, a: 1}
+  dayColors:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0.754717, g: 0.57726735, b: 0.35243857, a: 1}
+  - {r: 0.21119614, g: 0.26007208, b: 0.3962264, a: 1}
+  - {r: 0.03529412, g: 0.039215688, b: 0.06666667, a: 1}
+  currentStep: 0
+  currentColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &992452407
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9333,5 +9371,5 @@ SceneRoots:
   - {fileID: 461845419}
   - {fileID: 1676517207}
   - {fileID: 370674386}
+  - {fileID: 963368632}
   - {fileID: 404852568}
-  - {fileID: 865207912}
