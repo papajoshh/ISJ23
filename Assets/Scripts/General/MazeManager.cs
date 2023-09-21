@@ -13,6 +13,11 @@ public class MazeManager : MonoBehaviour
     [SerializeField] private List<DialogScriptable> endMazeDialog;
 
 
+    private void Start()
+    {
+        Player_DropBread.instance.RestoreBreadAmount();
+    }
+
     public void OnEndMaze()
     {
         UI_DialogPanel.instance.onEndDialog += OnEndMazeDialog;
