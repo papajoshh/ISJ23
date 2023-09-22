@@ -253,8 +253,6 @@ GameObject:
   - component: {fileID: 6575229440670397656}
   - component: {fileID: 2647594331323155362}
   - component: {fileID: 8803516040825892128}
-  - component: {fileID: 1129626674194187673}
-  - component: {fileID: 6523401013110759399}
   m_Layer: 0
   m_Name: SimplePlayer
   m_TagString: Player
@@ -507,48 +505,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2647594331323155362}
-        m_TargetAssemblyTypeName: Player.PlayerDead, Assembly-CSharp
-        m_MethodName: PlayerDeadFunction
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1129626674194187673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5592392813738289931}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a068dd4600fac49449f309864238ed96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cruceirosObj: []
-  cruceirosTransform: []
---- !u!114 &6523401013110759399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5592392813738289931}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae5ab44c0656ce34a860aec33046e1b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 2bfdc0c560d20bd46822a7cbdaa5c323, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1129626674194187673}
         m_TargetAssemblyTypeName: Player.PlayerDead, Assembly-CSharp
         m_MethodName: PlayerDeadFunction
         m_Mode: 1
