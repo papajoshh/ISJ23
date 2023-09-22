@@ -8,11 +8,13 @@ namespace Player
     {
         [SerializeField] private GameObject[] cruceirosObj;
         [SerializeField] private Transform[] cruceirosTransform;
+        [SerializeField] private GameObject lastCruceiro;
 
         private void Start()
         {
             cruceirosObj = GameObject.FindGameObjectsWithTag("Cruceiro");
             cruceirosTransform = new Transform[cruceirosObj.Length];
+            lastCruceiro = null;
 
             for (int i = 0; i < cruceirosObj.Length; i++)
             {
@@ -20,10 +22,17 @@ namespace Player
             }
         }
 
+        public void SetLastCruceiro(GameObject newCruceiro)
+        {
+            lastCruceiro = newCruceiro;
+        }
+
         public void PlayerDeadFunction()
         {
-            
-            this.gameObject.transform.position = GetNearestCruceiro(cruceirosTransform).GetChild(0).position;
+            if (lastCruceiro != null)
+                this.gameObject.transform.position = lastCruceiro.transform.GetChild(0).position;
+            else
+                this.gameObject.transform.position = GetNearestCruceiro(cruceirosTransform).GetChild(0).position;
         }
 
         private Transform GetNearestCruceiro(Transform[] cruceiro)

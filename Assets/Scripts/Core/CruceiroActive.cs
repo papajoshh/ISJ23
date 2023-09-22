@@ -13,6 +13,7 @@ namespace Core
 
         private void OnTriggerEnter2D(Collider2D col)
         {
+            Player_DropBread.instance.gameObject.GetComponent<Player.PlayerDead>().SetLastCruceiro(gameObject);
             cruceiro.SetActive(true);
             cruceiroEvent.Raise();
         }
