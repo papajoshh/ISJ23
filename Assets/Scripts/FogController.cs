@@ -11,7 +11,8 @@ public class FogController : MonoBehaviour
     [SerializeField] private float initValue;
     [SerializeField] private float nigthValue;
 
-    private void Start()
+
+    private void OnEnable()
     {
         fogMaterial = GetComponent<Renderer>();
         fogMaterial.sharedMaterial.SetFloat("_Fog_transparency", initValue);
