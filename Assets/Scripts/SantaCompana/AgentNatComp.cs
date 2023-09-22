@@ -11,6 +11,7 @@ namespace SantaCompana
         [SerializeField] private NavMeshAgent agent;
         [SerializeField] private Transform player;
         [SerializeField] private GameObject[] newDestinationsArray;
+        [SerializeField] private Animator animator;
         private GameObject newDestinationNav;
 
         [Header("Values")]
@@ -22,6 +23,8 @@ namespace SantaCompana
         [Header("Player follow check")]
         [SerializeField] private bool followPlayer;
 
+        private Vector2 lastPos;
+
         private void Start()
         {
             agent = GetComponent<NavMeshAgent>();
@@ -30,6 +33,8 @@ namespace SantaCompana
             
             agent.updateRotation = false;
             agent.updateUpAxis = false;
+
+            lastPos = transform.position;
         }
 
         // Update is called once per frame
@@ -42,6 +47,7 @@ namespace SantaCompana
             }
             
             ChangeAgentSpeed();
+            TestAgentDirectionPos();
         }
 
         private void ChangeAgentSpeed()
@@ -87,6 +93,27 @@ namespace SantaCompana
         public void ChangeFollowBoolValue()
         {
             followPlayer =! followPlayer;
+        }
+        
+        private Vector2 CheckAgentDirection()
+        {
+            Vector2 direction = (EnemyDestination().position - transform.position).normalized;
+            return direction;
+        }
+
+        private void TestAgentDirectionPos()
+        {
+            Vector2 currentPos = transform.position;
+            Vector2 moveDirection = currentPos - lastPos;
+            EnemyAnim(moveDirection);
+            lastPos = currentPos;
+        }
+
+        private void EnemyAnim(Vector2 moveDirection)
+        {
+            animator.SetFloat("Horizontal", moveDirection.x);
+            animator.SetFloat("Vertical", moveDirection.y);
+            //animator.SetFloat("Speed", CheckAgentDirection().sqrMagnitude);
         }
     }
 }
