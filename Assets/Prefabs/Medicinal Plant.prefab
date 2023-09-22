@@ -177,6 +177,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mazeManager: {fileID: 0}
+  firstPlantDialog:
+  - {fileID: 11400000, guid: 6d88eef4a96400944963e84d2a83f4f4, type: 2}
 --- !u!1001 &3251872961967894420
 PrefabInstance:
   m_ObjectHideFlags: 0

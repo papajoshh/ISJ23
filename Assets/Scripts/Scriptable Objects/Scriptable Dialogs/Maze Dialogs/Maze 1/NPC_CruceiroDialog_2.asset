@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 822a0a79a6b822b4baefe2b309786cf8, type: 3}
-  m_Name: Maze1_NPC1_Dialog2
+  m_Name: NPC_CruceiroDialog_2
   m_EditorClassIdentifier: 
   characterName: Peregrino
-  dialogText: "\xA1Dicen que aleja a los malos espiritus en la noche!"
+  dialogText: "Dicen que ahuyentan a los malos esp\xEDritus...\xA1pero yo los uso
+    para recargar mi l\xE1mpara de aceite en la noche!"
   voiceSFX: {fileID: 8300000, guid: 28871781b0b4a8b468d9d54fd94dbe2e, type: 3}
   characterPortrait: {fileID: 21300000, guid: 6bca8c59efec172498368cec7fb4b2b3, type: 3}

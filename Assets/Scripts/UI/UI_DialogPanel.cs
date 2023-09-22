@@ -59,6 +59,8 @@ public class UI_DialogPanel : MonoBehaviour
 
     public void ShowDialog(List<DialogScriptable> newDialogList)
     {
+        Core.GameStateController.Instance.ChangeGameStateTo(Core.GameStateController.GameState.Pause);
+
         dialogList = newDialogList;
         dialogPanel.SetActive(true);
         onDialog = true;
@@ -129,7 +131,9 @@ public class UI_DialogPanel : MonoBehaviour
         onDialog = false;
         currentDialogIndex = 0;
 
-        onEndDialog.Invoke();
+        if(onEndDialog != null)
+            onEndDialog.Invoke();
+
         dialogPanel.SetActive(false);
     }
 

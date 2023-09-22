@@ -6,4 +6,7 @@ public static class StaticData
 {
     [Header("[Values]")]
     public static int gamePhase;
+    public static bool firstPlantDialog;
+
+
 }
