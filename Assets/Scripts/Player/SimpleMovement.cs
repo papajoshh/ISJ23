@@ -33,8 +33,11 @@ namespace Player
         // Update is called once per frame
         void Update()
         {
-            PlayerInputsValues();
-            PlayerAnimationController();
+            if (GameStateController.Instance.gameState == GameStateController.GameState.Gameplay)
+            {
+                PlayerInputsValues();
+                PlayerAnimationController();
+            }
         }
 
         private void FixedUpdate()
