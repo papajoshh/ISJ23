@@ -108,6 +108,11 @@ namespace Player
                 SpritePlayerOn(nigthPlayer, dayPlayer);
             }
         }
+
+        public void ChangePlayerSprite()
+        {
+            isDay =! isDay;
+        }
         
     }
 }

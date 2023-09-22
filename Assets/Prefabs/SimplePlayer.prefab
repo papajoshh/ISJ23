@@ -253,6 +253,7 @@ GameObject:
   - component: {fileID: 6575229440670397656}
   - component: {fileID: 2647594331323155362}
   - component: {fileID: 8803516040825892128}
+  - component: {fileID: 6524271388736835755}
   m_Layer: 0
   m_Name: SimplePlayer
   m_TagString: Player
@@ -507,6 +508,34 @@ MonoBehaviour:
       - m_Target: {fileID: 2647594331323155362}
         m_TargetAssemblyTypeName: Player.PlayerDead, Assembly-CSharp
         m_MethodName: PlayerDeadFunction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6524271388736835755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5592392813738289931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae5ab44c0656ce34a860aec33046e1b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 1eb439ab1b3e6c849a80c1cdfaaf93c8, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6240083109538405428}
+        m_TargetAssemblyTypeName: Player.SimpleMovement, Assembly-CSharp
+        m_MethodName: ChangePlayerSprite
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
