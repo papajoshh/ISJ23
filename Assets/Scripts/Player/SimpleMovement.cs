@@ -7,17 +7,23 @@ namespace Player
     public class SimpleMovement : MonoBehaviour
     {
         private Vector2 movement;
-
+        
+        [Header("Components")]
+        [SerializeField] private Rigidbody2D rb2d;
+        [SerializeField] private Animator dayAnim;
+        [SerializeField] private GameObject dayPlayer;
+        [SerializeField] private Animator nigthAnim;
+        [SerializeField] private GameObject nigthPlayer;
+        
+        [Header("Values")]
         public float speed;
         public float normalSpeed;
-        [SerializeField] private Rigidbody2D rb2d;
         [SerializeField] private float runAccelAmount;
         [SerializeField] private float runDeccelAmount;
+        [SerializeField] private bool isDay;
 
+        [HideInInspector]
         public Vector2 faceDirection;
-
-        [Header("Test move with force")]
-        public bool testMoveImprove;
 
         private void Start()
         {
@@ -28,6 +34,7 @@ namespace Player
         void Update()
         {
             PlayerInputsValues();
+            PlayerAnimationController();
         }
 
         private void FixedUpdate()
@@ -47,34 +54,12 @@ namespace Player
         {
             movement.x = Input.GetAxisRaw("Horizontal");
             movement.y = Input.GetAxisRaw("Vertical");
-
-            if(movement != Vector2.zero)
-            {
-                faceDirection.x = movement.x;
-                faceDirection.y = movement.y;
-            }
+            CheckFaceDirection();
         }
 
         private void CanMove()
         {
-            if (testMoveImprove)
-            {
-                PlayerMoveImprove();
-            }
-            else
-            {
-                PlayerMovement(speed);
-            }
-        }
-
-        private void PlayerMovement(float s)
-        {
-            if (movement.x == 0 || movement.y == 0)
-            {
-                rb2d.velocity = Vector2.zero;
-            }
-            
-            rb2d.MovePosition(rb2d.position + movement.normalized * (s * Time.fixedDeltaTime));
+            PlayerMoveImprove();
         }
 
         private void PlayerMoveImprove()
@@ -86,6 +71,42 @@ namespace Player
             Vector2 rate = new Vector2(speedDif.x * accelRate.x, speedDif.y * accelRate.y);
             
             rb2d.AddForce(rate, ForceMode2D.Force);
+        }
+
+        private void CheckFaceDirection()
+        {
+            if(movement != Vector2.zero)
+            {
+                faceDirection.x = movement.x;
+                faceDirection.y = movement.y;
+            }
+        }
+
+        private void PlayerAnimation(Animator animator)
+        {
+            animator.SetFloat("Horizontal", movement.x);
+            animator.SetFloat("Vertical", movement.y);
+            animator.SetFloat("Speed", movement.sqrMagnitude);
+        }
+
+        private void SpritePlayerOn(GameObject spriteOn, GameObject spriteOff)
+        {
+            spriteOn.SetActive(true);
+            spriteOff.SetActive(false);
+        }
+
+        private void PlayerAnimationController()
+        {
+            if (isDay)
+            {
+                PlayerAnimation(dayAnim);
+                SpritePlayerOn(dayPlayer, nigthPlayer);
+            }
+            else
+            {
+                PlayerAnimation(nigthAnim);
+                SpritePlayerOn(nigthPlayer, dayPlayer);
+            }
         }
         
     }
