@@ -57,7 +57,7 @@ Material:
     - _Fog_power: 0.35
     - _Fog_scale: 4.5
     - _Fog_speed: 0.063
-    - _Fog_transparency: 1.2
+    - _Fog_transparency: 0.15
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
