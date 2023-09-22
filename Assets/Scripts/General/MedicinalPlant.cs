@@ -19,23 +19,8 @@ public class MedicinalPlant : MonoBehaviour
 
     private void TakePlant()
     {
-        if (StaticData.firstPlantDialog == false)
-        {
-            StaticData.firstPlantDialog = true;
-            UI_DialogPanel.instance.onEndDialog += OnFirstPlant_EndDialog;
-            UI_DialogPanel.instance.ShowDialog(firstPlantDialog);
-        }
-        else
-        {
-            mazeManager.OnPlantObtained();
-            gameObject.SetActive(false);
-        }
-    }
-
-    private void OnFirstPlant_EndDialog()
-    {
-        Core.GameStateController.Instance.ChangeGameStateTo(Core.GameStateController.GameState.Gameplay);
         mazeManager.OnPlantObtained();
         gameObject.SetActive(false);
     }
+
 }

@@ -32,10 +32,6 @@ namespace Core
 
         public GameState gameState;
 
-        private void Start()
-        {
-            gameState = GameState.Gameplay;
-        }
 
         private void Update()
         {
@@ -47,6 +43,7 @@ namespace Core
 
         public void ChangeGameStateTo(GameState state)
         {
+            Debug.Log("Cambiando");
             gameState = state;
         }
     }

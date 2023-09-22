@@ -4,9 +4,12 @@ using UnityEngine;
 using Core;
 using GameEvents;
 using NavMeshPlus.Components;
+using System;
 
 public class MazeManager : MonoBehaviour
 {
+    public Action OnPlantTaken;
+
     [Header("[References]")]
     [SerializeField] private NavMeshSurface navMeshSurface;
     [SerializeField] private LightManager lightManager;
@@ -22,7 +25,7 @@ public class MazeManager : MonoBehaviour
     [SerializeField] private GameEvent spawnEnemy;
 
     [Header("[Values]")]
-    [SerializeField] private int plantsObtained;
+    [SerializeField] public int plantsObtained;
 
 
     private void Start()
@@ -36,6 +39,9 @@ public class MazeManager : MonoBehaviour
     {
         plantsObtained++;
         lightManager.Darken();
+
+        if (OnPlantTaken != null)
+            OnPlantTaken.Invoke();
 
         if(plantsObtained == plantsNeeded -1)
         {
