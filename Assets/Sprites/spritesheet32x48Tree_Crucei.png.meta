@@ -144,7 +144,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet32x48_1
+      name: cruceiro
       rect:
         serializedVersion: 2
         x: 36
@@ -165,7 +165,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet32x48_2
+      name: cruceiroold
       rect:
         serializedVersion: 2
         x: 68
@@ -193,8 +193,8 @@ TextureImporter:
         y: 0
         width: 32
         height: 48
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -280,9 +280,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      cruceiro: 1642781703
+      cruceiroold: -2087824995
       spritesheet32x48_0: -1117169395
-      spritesheet32x48_1: 1642781703
-      spritesheet32x48_2: -2087824995
       spritesheet32x48_3: -601649655
       spritesheet32x48_4: -109004823
       spritesheet32x48_5: 1830704181
