@@ -25,6 +25,8 @@ namespace Player
         [HideInInspector]
         public Vector2 faceDirection;
 
+        private bool isMoving;
+
         private void Start()
         {
             normalSpeed = speed;
@@ -82,14 +84,26 @@ namespace Player
             {
                 faceDirection.x = movement.x;
                 faceDirection.y = movement.y;
+                isMoving = true;
+            }
+            else
+            {
+                isMoving = false;
             }
         }
 
         private void PlayerAnimation(Animator animator)
         {
-            animator.SetFloat("Horizontal", movement.x);
-            animator.SetFloat("Vertical", movement.y);
-            animator.SetFloat("Speed", movement.sqrMagnitude);
+            if (movement.magnitude != 0)
+            {
+                animator.SetFloat("Horizontal", movement.x);
+                animator.SetFloat("Vertical", movement.y);
+                animator.Play("Movement");
+            }
+            else
+            {
+                animator.Play("IdleBlend");
+            }
         }
 
         private void SpritePlayerOn(GameObject spriteOn, GameObject spriteOff)
