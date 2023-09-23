@@ -321,7 +321,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 10
   m_Sprite: {fileID: 158640114, guid: e3406d0ea6ffa99459cf5b08e98bf8b6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -461,6 +461,8 @@ MonoBehaviour:
   playerMovement: {fileID: 6240083109538405428}
   runSpeed: 3
   sweatParticle: {fileID: 2792123180640297454}
+  animator: {fileID: 1550526699701376946}
+  nightAnimator: {fileID: 8158819632351739128}
   sprintCooldown: 2
   isOnMug: 0
 --- !u!114 &6575229440670397656

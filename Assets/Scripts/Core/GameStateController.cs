@@ -31,19 +31,10 @@ namespace Core
         }
 
         public GameState gameState;
-
-
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.P))
-            {
-                ChangeGameStateTo(GameState.Pause);
-            }
-        }
+        
 
         public void ChangeGameStateTo(GameState state)
         {
-            Debug.Log("Cambiando");
             gameState = state;
         }
     }
