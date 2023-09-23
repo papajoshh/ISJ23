@@ -16,4 +16,4 @@ MonoBehaviour:
   dialogText: "Bajar\xE9 al r\xEDo a por cola de caballo y diente de le\xF3n, \xA1eso
     bajar\xE1 la infecci\xF3n!"
   voiceSFX: {fileID: 8300000, guid: cadea0e4396fc2d46b0cae88c0df656e, type: 3}
-  characterPortrait: {fileID: 21300000, guid: 6b032e82e59f0c847ace36850204858e, type: 3}
+  characterPortrait: {fileID: 21300000, guid: 3147f4cad60cbdf43a0b2ea83c1b0e7b, type: 3}
