@@ -101,6 +101,8 @@ MonoBehaviour:
   intensityValue: 1
   outerValue: 3
   wastingLigth: 1
+  torchFirstOn: 0
+  initValueIntensity: 0
 --- !u!114 &129284502992588949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -617,7 +619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ab44c0656ce34a860aec33046e1b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 1eb439ab1b3e6c849a80c1cdfaaf93c8, type: 2}
+  gameEvent: {fileID: 11400000, guid: 0c364bf42dcecb0479d596f60cd29563, type: 2}
   response:
     m_PersistentCalls:
       m_Calls:
