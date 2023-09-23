@@ -2565,9 +2565,17 @@ PrefabInstance:
       propertyPath: gameEvent
       value: 
       objectReference: {fileID: 11400000, guid: 0c364bf42dcecb0479d596f60cd29563, type: 2}
+    - target: {fileID: 7137297291771137038, guid: e6c09c4bc63e6c1449d109660af7e2b2, type: 3}
+      propertyPath: torchFirstOn
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8803516040825892128, guid: e6c09c4bc63e6c1449d109660af7e2b2, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8955330451430420014, guid: e6c09c4bc63e6c1449d109660af7e2b2, type: 3}
+      propertyPath: m_Intensity
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9345,7 +9353,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1111244583
 Transform:
   m_ObjectHideFlags: 0
@@ -9674,7 +9682,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1356253004
 Transform:
   m_ObjectHideFlags: 0
@@ -19022,6 +19030,22 @@ PrefabInstance:
     - target: {fileID: 7903590826059043501, guid: d5c592b8ce0970942b7aed165d1bab12, type: 3}
       propertyPath: m_Offset.y
       value: 0.0048149824
+      objectReference: {fileID: 0}
+    - target: {fileID: 8629776280578088127, guid: d5c592b8ce0970942b7aed165d1bab12, type: 3}
+      propertyPath: m_Size.x
+      value: 2.2064447
+      objectReference: {fileID: 0}
+    - target: {fileID: 8629776280578088127, guid: d5c592b8ce0970942b7aed165d1bab12, type: 3}
+      propertyPath: m_Size.y
+      value: 3.137129
+      objectReference: {fileID: 0}
+    - target: {fileID: 8629776280578088127, guid: d5c592b8ce0970942b7aed165d1bab12, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.051704645
+      objectReference: {fileID: 0}
+    - target: {fileID: 8629776280578088127, guid: d5c592b8ce0970942b7aed165d1bab12, type: 3}
+      propertyPath: m_Offset.y
+      value: -1.0685648
       objectReference: {fileID: 0}
     - target: {fileID: 8850848055299619395, guid: d5c592b8ce0970942b7aed165d1bab12, type: 3}
       propertyPath: m_LocalPosition.x

@@ -18,31 +18,51 @@ namespace Ligths
         [SerializeField] private float outerValue;
         [SerializeField] private bool wastingLigth;
 
-        private float initValueIntensity;
+        [SerializeField] private bool torchFirstOn;
+
+        [SerializeField] private float initValueIntensity;
         private float initValueOuter;
 
         private void Start()
         {
+            torchFirstOn = false;
             initValueIntensity = farolLigth.intensity;
             initValueOuter = farolLigth.pointLightOuterRadius;
+
+            farolLigth.intensity = 0f;
+
+            StartCoroutine(FirstTorchOn());
         }
 
-        private void Update()
+        private IEnumerator FirstTorchOn()
         {
-            if (wastingLigth)
+            while (farolLigth.intensity < initValueIntensity)
             {
-                ChangeIntesityValueReduce();
-                ChangeOuterValueReduce();
-            }
-            else if (!wastingLigth)
-            {
-                ChangeIntesityValueIncrease(100);
-                ChangeOuterValueIncrease(100);
+                farolLigth.intensity += 0.01f;
+                yield return new WaitForEndOfFrame();
             }
 
+            torchFirstOn = true;
         }
         
+        private void Update()
+        {
 
+            if (torchFirstOn)
+            {
+                if (wastingLigth)
+                {
+                    ChangeIntesityValueReduce();
+                    ChangeOuterValueReduce();
+                }
+                else if (!wastingLigth)
+                {
+                    ChangeIntesityValueIncrease(100);
+                    ChangeOuterValueIncrease(100);
+                }
+            }
+        }
+        
         private void ChangeIntesityValueReduce()
         {
 
