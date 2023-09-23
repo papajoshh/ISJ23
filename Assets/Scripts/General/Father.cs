@@ -18,12 +18,6 @@ public class Father : MonoBehaviour, IInteractable
         Debug.Log("La fase del juego actual es:" + StaticData.gamePhase);
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.F1))
-            StaticData.gamePhase++;
-    }
-
     public void Interact()
     {
         UI_DialogPanel.instance.onEndDialog += OnEndDialog;

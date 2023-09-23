@@ -8207,30 +8207,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialog Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 2283695380941709296, guid: fd96acad2a10e9343bb5f4b5dcb605c3, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4409719325650827552, guid: fd96acad2a10e9343bb5f4b5dcb605c3, type: 3}
-      propertyPath: m_text
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4409719325650827552, guid: fd96acad2a10e9343bb5f4b5dcb605c3, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 02438ed8d49f0fa43ae11f55d4279183, type: 2}
-    - target: {fileID: 4409719325650827552, guid: fd96acad2a10e9343bb5f4b5dcb605c3, type: 3}
-      propertyPath: m_fontStyle
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4409719325650827552, guid: fd96acad2a10e9343bb5f4b5dcb605c3, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 8528505809328335564, guid: 02438ed8d49f0fa43ae11f55d4279183, type: 2}
-    - target: {fileID: 4409719325650827552, guid: fd96acad2a10e9343bb5f4b5dcb605c3, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5216937632216855140, guid: fd96acad2a10e9343bb5f4b5dcb605c3, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -8310,22 +8286,6 @@ PrefabInstance:
     - target: {fileID: 5216937632216855140, guid: fd96acad2a10e9343bb5f4b5dcb605c3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6011968010719205022, guid: fd96acad2a10e9343bb5f4b5dcb605c3, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6011968010719205022, guid: fd96acad2a10e9343bb5f4b5dcb605c3, type: 3}
-      propertyPath: m_Color.b
-      value: 0.27536488
-      objectReference: {fileID: 0}
-    - target: {fileID: 6011968010719205022, guid: fd96acad2a10e9343bb5f4b5dcb605c3, type: 3}
-      propertyPath: m_Color.g
-      value: 0.38440013
-      objectReference: {fileID: 0}
-    - target: {fileID: 6011968010719205022, guid: fd96acad2a10e9343bb5f4b5dcb605c3, type: 3}
-      propertyPath: m_Color.r
-      value: 0.49056602
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

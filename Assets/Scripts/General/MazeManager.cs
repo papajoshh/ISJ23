@@ -5,12 +5,15 @@ using Core;
 using GameEvents;
 using NavMeshPlus.Components;
 using System;
+using Cinemachine;
 
 public class MazeManager : MonoBehaviour
 {
     public Action OnPlantTaken;
 
     [Header("[References]")]
+    [SerializeField] private CinemachineConfiner cameraConfiner;
+    [SerializeField] private PolygonCollider2D levelConfiner;
     [SerializeField] private NavMeshSurface navMeshSurface;
     [SerializeField] private LightManager lightManager;
     [SerializeField] private GameObject initialPlayerPosition;
@@ -32,6 +35,7 @@ public class MazeManager : MonoBehaviour
     {
         Player_DropBread.instance.RestoreBreadAmount();
         Player_DropBread.instance.gameObject.transform.position = initialPlayerPosition.transform.position;
+        cameraConfiner.m_BoundingShape2D = levelConfiner;
         navMeshSurface.BuildNavMesh();
     }
 
