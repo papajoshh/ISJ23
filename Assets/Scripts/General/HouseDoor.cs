@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Cinemachine;
 
 public class HouseDoor : MonoBehaviour
 {
     [Header("[References]")]
     [SerializeField] private AudioSource audiosource;
+    [SerializeField] private CinemachineConfiner cameraConfiner;
+    [SerializeField] private PolygonCollider2D exteriorConfiner;
 
     [Header("[Configuration]")]
     [SerializeField] private GameObject exteriorPosition;
@@ -47,6 +49,7 @@ public class HouseDoor : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         Player_Interactor.instance.gameObject.transform.position = exteriorPosition.transform.position;
+        cameraConfiner.m_BoundingShape2D = exteriorConfiner;
         UI_FadeCanvas.instance.Play_FadeOut();
         yield return new WaitForSeconds(1f);
 
