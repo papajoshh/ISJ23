@@ -57,8 +57,12 @@ namespace Player
                 {
                     animator.speed = 2f;
                     nightAnimator.speed = 2f;
-                    playerMovement.speed = runSpeed;
                     TimePlayerCanSprint += Time.deltaTime;
+
+                    if (isOnMug)
+                        playerMovement.speed = runSpeed / 2;
+                    else
+                        playerMovement.speed = runSpeed;
                 }
 
             }

@@ -6,7 +6,6 @@ namespace Core
 {
     public class MudTerrain : MonoBehaviour
     {
-
         [SerializeField] private SimpleMovement playerMove;
         [SerializeField] private PlayerRunSkill playerRunSkill;
         [SerializeField] private float mugSpeed;
