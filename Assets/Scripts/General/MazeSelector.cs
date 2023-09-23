@@ -10,23 +10,48 @@ public class MazeSelector : MonoBehaviour
     [SerializeField] private GameObject maze3;
     [SerializeField] private GameObject maze4;
 
+    [Header("[Debug]")]
+    [SerializeField] private int setLevel;
 
     private void Awake()
     {
-        switch (StaticData.gamePhase)
+        if(setLevel != -1)
         {
-            case 0:
-                maze1.SetActive(true);
-                break;
-            case 1:
-                maze2.SetActive(true);
-                break;
-            case 2:
-                maze3.SetActive(true);
-                break;
-            case 3:
-                maze4.SetActive(true);
-                break;
+            switch (setLevel)
+            {
+                case 0:
+                    maze1.SetActive(true);
+                    break;
+                case 1:
+                    maze2.SetActive(true);
+                    break;
+                case 2:
+                    maze3.SetActive(true);
+                    break;
+                case 3:
+                    maze4.SetActive(true);
+                    break;
+            }
         }
+        else
+        {
+            switch (StaticData.gamePhase)
+            {
+                case 0:
+                    maze1.SetActive(true);
+                    break;
+                case 1:
+                    maze2.SetActive(true);
+                    break;
+                case 2:
+                    maze3.SetActive(true);
+                    break;
+                case 3:
+                    maze4.SetActive(true);
+                    break;
+            }
+        }
+
+        
     }
 }
