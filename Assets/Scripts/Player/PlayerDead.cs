@@ -29,6 +29,8 @@ namespace Player
 
         public void PlayerDeadFunction()
         {
+            UI_ScreamerCanvas.instance.ShowScreamer();
+
             if (lastCruceiro != null)
                 this.gameObject.transform.position = lastCruceiro.transform.GetChild(0).position;
             else
