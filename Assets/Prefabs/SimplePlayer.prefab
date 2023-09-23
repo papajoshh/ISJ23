@@ -254,6 +254,7 @@ GameObject:
   - component: {fileID: 2647594331323155362}
   - component: {fileID: 8803516040825892128}
   - component: {fileID: 6524271388736835755}
+  - component: {fileID: 3608282265387964147}
   m_Layer: 0
   m_Name: SimplePlayer
   m_TagString: Player
@@ -548,6 +549,14 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!81 &3608282265387964147
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5592392813738289931}
+  m_Enabled: 1
 --- !u!1 &6324032817036076923
 GameObject:
   m_ObjectHideFlags: 0
