@@ -7,11 +7,14 @@ public class UI_ScreamerCanvas : MonoBehaviour
     public static UI_ScreamerCanvas instance;
 
     [Header("[References]")]
-    [SerializeField] private AudioSource audiosource;
+    [SerializeField] private AudioSource audiosourceScreamer;
+    [SerializeField] private AudioSource audiosourceThunder;
+    [SerializeField] private Animator screamerAnimator;
     [SerializeField] private GameObject screamerPanel;
 
     [Header("[Configuration]")]
     [SerializeField] private AudioClip screamerSFX;
+    [SerializeField] private AudioClip thunderSFX;
 
 
     private void Awake()
@@ -39,13 +42,15 @@ public class UI_ScreamerCanvas : MonoBehaviour
         IEnumerator Coroutine_ShowScreamer()
         {
             Core.GameStateController.Instance.ChangeGameStateTo(Core.GameStateController.GameState.Pause);
-            audiosource.PlayOneShot(screamerSFX);
+            audiosourceScreamer.PlayOneShot(screamerSFX);
+            audiosourceThunder.PlayOneShot(thunderSFX);
             screamerPanel.SetActive(true);
+            screamerAnimator.Play("SCREAMER");
 
-            yield return new WaitForSeconds(0.25f);
+            yield return new WaitForSeconds(2f);
             UI_FadeCanvas.instance.Play_FadeIn();
 
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(1);
             screamerPanel.SetActive(false);
             UI_FadeCanvas.instance.Play_FadeOut();
 
@@ -57,7 +62,8 @@ public class UI_ScreamerCanvas : MonoBehaviour
     public void ShowScreamerImage()
     {
         Core.GameStateController.Instance.ChangeGameStateTo(Core.GameStateController.GameState.Pause);
-        audiosource.PlayOneShot(screamerSFX);
+        audiosourceScreamer.PlayOneShot(screamerSFX);
+        audiosourceThunder.PlayOneShot(thunderSFX);
         screamerPanel.SetActive(true);
     }
 
