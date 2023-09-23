@@ -9,7 +9,12 @@ namespace Player
         [SerializeField] private SimpleMovement playerMovement;
         [SerializeField] private float runSpeed;
 
-        [Header("Particle")] [SerializeField] private ParticleSystem sweatParticle;
+        [Header("Particle")] [SerializeField] 
+        private ParticleSystem sweatParticle;
+        
+        [Header("Animator")] 
+        [SerializeField] private Animator animator;
+        [SerializeField] private Animator nightAnimator;
         
         private float timePlayerCanSprint;
         private float TimePlayerCanSprint
@@ -50,6 +55,8 @@ namespace Player
             {
                 if (canSprint)
                 {
+                    animator.speed = 2f;
+                    nightAnimator.speed = 2f;
                     playerMovement.speed = runSpeed;
                     TimePlayerCanSprint += Time.deltaTime;
                 }
@@ -59,6 +66,8 @@ namespace Player
             {
                 if (!isOnMug)
                 {
+                    animator.speed = 1f;
+                    nightAnimator.speed = 1f;
                     playerMovement.speed = playerMovement.normalSpeed;
                     TimePlayerCanSprint -= Time.deltaTime;
                 }
