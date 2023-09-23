@@ -175,9 +175,9 @@ MonoBehaviour:
   newDestinationsArray: []
   animator: {fileID: 7792054166656814836}
   distanceMinPlayer: 5
-  normalSpeed: 1.75
-  newDestinationSpeed: 1.5
-  initialDSpeed: 6
+  normalSpeed: 1.25
+  newDestinationSpeed: 2
+  outRangePlayerSpeed: 2
   followPlayer: 1
 --- !u!114 &4731532798857551199
 MonoBehaviour:

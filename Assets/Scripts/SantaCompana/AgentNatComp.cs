@@ -18,7 +18,7 @@ namespace SantaCompana
         [SerializeField] private float distanceMinPlayer;
         [SerializeField] private float normalSpeed;
         [SerializeField] private float newDestinationSpeed;
-        [SerializeField] private float initialDSpeed;
+        [SerializeField] private float outRangePlayerSpeed;
 
         [Header("Player follow check")]
         [SerializeField] private bool followPlayer;
@@ -43,7 +43,7 @@ namespace SantaCompana
             if (GameStateController.Instance.gameState == GameStateController.GameState.Gameplay)
             {
                 AgentFollow(EnemyDestination());
-                AgentDistance(player);
+                //AgentDistance(player);
             }
             
             ChangeAgentSpeed();
@@ -58,7 +58,8 @@ namespace SantaCompana
             }
             else
             {
-                agent.speed = normalSpeed;
+                float distance = Vector3.Distance(this.gameObject.transform.position, player.transform.position);
+                agent.speed = distance >= distanceMinPlayer ? outRangePlayerSpeed : normalSpeed;
             }
         }
 
@@ -67,12 +68,12 @@ namespace SantaCompana
             agent.SetDestination(target.position);
         }
 
-        private void AgentDistance(Transform target)
-        {
-            float distance = Vector3.Distance(this.gameObject.transform.position, target.transform.position);
+        //private void AgentDistance(Transform target)
+        //{
+        //    float distance = Vector3.Distance(this.gameObject.transform.position, target.transform.position);
 
-            agent.speed = distance >= distanceMinPlayer ? initialDSpeed : normalSpeed;
-        }
+        //    agent.speed = distance >= distanceMinPlayer ? outRangePlayerSpeed : normalSpeed;
+        //}
 
         private Transform EnemyDestination()
         {

@@ -97,9 +97,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   farolLigth: {fileID: 8955330451430420014}
-  reductionRate: 0.1
+  reductionRate: 0.075
   intensityValue: 1
-  outerValue: 1.5
+  outerValue: 3
   wastingLigth: 1
 --- !u!114 &129284502992588949
 MonoBehaviour:
