@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 
 public class HouseDoor : MonoBehaviour
 {
@@ -44,9 +44,12 @@ public class HouseDoor : MonoBehaviour
         UI_FadeCanvas.instance.Play_FadeIn();
         audiosource.PlayOneShot(doorSFX);
         Core.GameStateController.Instance.ChangeGameStateTo(Core.GameStateController.GameState.Pause);
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(2f);
 
+        Player_Interactor.instance.gameObject.transform.position = exteriorPosition.transform.position;
+        UI_FadeCanvas.instance.Play_FadeOut();
+        yield return new WaitForSeconds(1f);
 
-        SceneManager.LoadScene("Gameplay");
+        Core.GameStateController.Instance.ChangeGameStateTo(Core.GameStateController.GameState.Gameplay);
     }
 }
