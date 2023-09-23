@@ -7,7 +7,7 @@ public class Events_Level4 : MonoBehaviour
     public static Events_Level4 instance;
 
     [Header("[References]")]
-    //[SerializeField] private EndingCanvas endingCanvas;
+    [SerializeField] private UI_EndingCredits creditsCanvas;
     [SerializeField] private MazeManager mazeManager;
 
     [Header("[Configuration]")]
@@ -52,6 +52,7 @@ public class Events_Level4 : MonoBehaviour
 
     public void Play_Ending()
     {
+        Core.GameStateController.Instance.ChangeGameStateTo(Core.GameStateController.GameState.Pause);
         StartCoroutine(Coroutine_PlayEnding());
 
         IEnumerator Coroutine_PlayEnding()
@@ -75,7 +76,7 @@ public class Events_Level4 : MonoBehaviour
             UI_FadeCanvas.instance.Play_FadeIn();
             yield return new WaitForSeconds(3);
 
-            //endingCanvas.PlayCredits();
+            creditsCanvas.Play_Credits();
         }
     }
 
