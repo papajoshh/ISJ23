@@ -54,4 +54,12 @@ public class UI_ScreamerCanvas : MonoBehaviour
         }
     }
 
+    public void ShowScreamerImage()
+    {
+        Core.GameStateController.Instance.ChangeGameStateTo(Core.GameStateController.GameState.Pause);
+        audiosource.PlayOneShot(screamerSFX);
+        screamerPanel.SetActive(true);
+    }
+
+
 }

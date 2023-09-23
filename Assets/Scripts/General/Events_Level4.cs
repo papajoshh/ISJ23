@@ -7,6 +7,7 @@ public class Events_Level4 : MonoBehaviour
     public static Events_Level4 instance;
 
     [Header("[References]")]
+    //[SerializeField] private EndingCanvas endingCanvas;
     [SerializeField] private MazeManager mazeManager;
 
     [Header("[Configuration]")]
@@ -51,7 +52,31 @@ public class Events_Level4 : MonoBehaviour
 
     public void Play_Ending()
     {
-        Debug.Log("Playing Ending");
+        StartCoroutine(Coroutine_PlayEnding());
+
+        IEnumerator Coroutine_PlayEnding()
+        {
+            UI_DialogPanel.instance.onEndDialog += Show_EndingCredits;
+            UI_ScreamerCanvas.instance.ShowScreamerImage();
+            yield return new WaitForSeconds(1);
+            
+            UI_DialogPanel.instance.ShowDialog(santaCompañaDialog);
+        }
+    }
+
+    private void Show_EndingCredits()
+    {
+        UI_DialogPanel.instance.onEndDialog -= Show_EndingCredits;
+
+        StartCoroutine(Coroutine_ShowCredits());
+
+        IEnumerator Coroutine_ShowCredits()
+        {
+            UI_FadeCanvas.instance.Play_FadeIn();
+            yield return new WaitForSeconds(3);
+
+            //endingCanvas.PlayCredits();
+        }
     }
 
     private void OnEndDialog()
