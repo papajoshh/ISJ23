@@ -54,7 +54,7 @@ public class LightManager : MonoBehaviour
     public void ActivatePlayerLight()
     {
         playerLight.SetActive(true);
-        fog.SetActive(true);
+        //fog.SetActive(true);
     }
 
     private void ResetLight()

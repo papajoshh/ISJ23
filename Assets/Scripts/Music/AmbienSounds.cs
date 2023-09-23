@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Threading.Tasks;
 using UnityEngine;
 
 namespace Music
@@ -12,7 +13,7 @@ namespace Music
 
         private void OnEnable()
         {
-            StartCoroutine(StartFade(audioSourceDay, 2f, 0.2f));
+            StartFadeTest(audioSourceDay, 4f, 0.15f);
         }
 
         private void OnDisable()
@@ -20,38 +21,45 @@ namespace Music
             audioSourceDay.Stop();
         }
 
-        private IEnumerator StartFade(AudioSource audioS, float duration, float targetVolume)
+        private void StartFadeTest(AudioSource audioS, float duration, float targetVolume)
         {
             audioS.Play();
             float currentTime = 0;
             float start = audioS.volume;
+    
             while (currentTime < duration)
             {
                 currentTime += Time.deltaTime;
                 audioS.volume = Mathf.Lerp(start, targetVolume, currentTime / duration);
-                yield return null;
             }
-            yield break;
         }
 
-        private IEnumerator FadeOut(AudioSource audioS, float duration, float targetVolume)
+        private void FadeOutTest(AudioSource audioS, float duration, float targetVolume)
         {
             float currentTime = 0;
             float start = audioS.volume;
+    
             while (currentTime < duration)
             {
                 currentTime += Time.deltaTime;
                 audioS.volume = Mathf.Lerp(start, targetVolume, currentTime / duration);
-                yield return null;
             }
-            yield break;
         }
-        
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.H))
+            {
+                ChangeMusic();
+            }
+        }
+
         public void ChangeMusic()
         {
-            StartCoroutine(FadeOut(audioSourceDay, 3f, 0f));
-            StartCoroutine(StartFade(audioSourceNigth, 4f, 0.15f));
+            FadeOutTest(audioSourceDay, 3f, 0f);
+            StartFadeTest(audioSourceNigth, 4f, 0.15f);
         }
+
         
     }
 }
