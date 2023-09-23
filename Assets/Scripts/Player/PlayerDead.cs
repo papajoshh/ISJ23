@@ -1,11 +1,14 @@
 using System;
 using Core;
 using UnityEngine;
+using System;
 
 namespace Player
 {
     public class PlayerDead : MonoBehaviour
     {
+        public Action onPlayerDead;
+
         [SerializeField] private GameObject[] cruceirosObj;
         [SerializeField] private Transform[] cruceirosTransform;
         [SerializeField] private GameObject lastCruceiro;
@@ -29,12 +32,19 @@ namespace Player
 
         public void PlayerDeadFunction()
         {
-            UI_ScreamerCanvas.instance.ShowScreamer();
+            if(Events_Level4.instance == null)
+            {
+                UI_ScreamerCanvas.instance.ShowScreamer();
 
-            if (lastCruceiro != null)
-                this.gameObject.transform.position = lastCruceiro.transform.GetChild(0).position;
+                if (lastCruceiro != null)
+                    this.gameObject.transform.position = lastCruceiro.transform.GetChild(0).position;
+                else
+                    this.gameObject.transform.position = GetNearestCruceiro(cruceirosTransform).GetChild(0).position;
+            }
             else
-                this.gameObject.transform.position = GetNearestCruceiro(cruceirosTransform).GetChild(0).position;
+            {
+                Events_Level4.instance.Play_Ending();
+            }
         }
 
         private Transform GetNearestCruceiro(Transform[] cruceiro)

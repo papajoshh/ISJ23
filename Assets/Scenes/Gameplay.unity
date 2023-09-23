@@ -636,7 +636,6 @@ Transform:
   - {fileID: 2014847717}
   - {fileID: 707852541}
   - {fileID: 1365380667}
-  - {fileID: 1308779574}
   - {fileID: 1502702956}
   - {fileID: 2037297869}
   - {fileID: 786694396}
@@ -11657,9 +11656,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 140285469}
     m_Modifications:
+    - target: {fileID: 126987607436439756, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
+      propertyPath: playerMove
+      value: 
+      objectReference: {fileID: 1145924945}
+    - target: {fileID: 126987607436439756, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
+      propertyPath: playerRunSkill
+      value: 
+      objectReference: {fileID: 1145924943}
     - target: {fileID: 375054590910180723, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
       propertyPath: m_Name
       value: Mud (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 375257404098606206, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2517168457466155499, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12264,7 +12275,7 @@ MonoBehaviour:
   maze2: {fileID: 1406675497}
   maze3: {fileID: 1909713286}
   maze4: {fileID: 941042665}
-  setLevel: 2
+  setLevel: 3
 --- !u!1 &419859548
 GameObject:
   m_ObjectHideFlags: 0
@@ -13982,9 +13993,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 140285469}
     m_Modifications:
+    - target: {fileID: 126987607436439756, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
+      propertyPath: playerMove
+      value: 
+      objectReference: {fileID: 1145924945}
+    - target: {fileID: 126987607436439756, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
+      propertyPath: playerRunSkill
+      value: 
+      objectReference: {fileID: 1145924943}
     - target: {fileID: 375054590910180723, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
       propertyPath: m_Name
       value: Mud (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 375257404098606206, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2517168457466155499, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20924,6 +20947,7 @@ GameObject:
   m_Component:
   - component: {fileID: 941042666}
   - component: {fileID: 941042667}
+  - component: {fileID: 941042668}
   m_Layer: 0
   m_Name: Maze 4
   m_TagString: Untagged
@@ -20974,6 +20998,23 @@ MonoBehaviour:
   plantsNeeded: 4
   spawnEnemy: {fileID: 11400000, guid: 1eb439ab1b3e6c849a80c1cdfaaf93c8, type: 2}
   plantsObtained: 0
+--- !u!114 &941042668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941042665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ff1836a5c3ee914ab0cdce67947a55d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mazeManager: {fileID: 941042667}
+  levelIntroDialog:
+  - {fileID: 11400000, guid: 038a2a4d2fb65994586828f324b0d178, type: 2}
+  - {fileID: 11400000, guid: 8874d93248253194c948cedbb08daacb, type: 2}
+  "santaCompa\xF1aDialog": []
 --- !u!1001 &944628225
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20982,9 +21023,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 140285469}
     m_Modifications:
+    - target: {fileID: 126987607436439756, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
+      propertyPath: playerMove
+      value: 
+      objectReference: {fileID: 1145924945}
+    - target: {fileID: 126987607436439756, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
+      propertyPath: playerRunSkill
+      value: 
+      objectReference: {fileID: 1145924943}
     - target: {fileID: 375054590910180723, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
       propertyPath: m_Name
       value: Mud (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 375257404098606206, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2517168457466155499, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22567,76 +22620,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5660279306206405594, guid: a377e2280a0a3aa4bafca835e7ad5694, type: 3}
   m_PrefabInstance: {fileID: 1303094288}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1308779573
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 140285469}
-    m_Modifications:
-    - target: {fileID: 4226087433339170433, guid: 8aa8baed4549e644a813d282d4ef59e7, type: 3}
-      propertyPath: m_Name
-      value: Medicinal Plant (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4226087433339170433, guid: 8aa8baed4549e644a813d282d4ef59e7, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4528976391370532397, guid: 8aa8baed4549e644a813d282d4ef59e7, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -9.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4528976391370532397, guid: 8aa8baed4549e644a813d282d4ef59e7, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 11.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4528976391370532397, guid: 8aa8baed4549e644a813d282d4ef59e7, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4528976391370532397, guid: 8aa8baed4549e644a813d282d4ef59e7, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4528976391370532397, guid: 8aa8baed4549e644a813d282d4ef59e7, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4528976391370532397, guid: 8aa8baed4549e644a813d282d4ef59e7, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4528976391370532397, guid: 8aa8baed4549e644a813d282d4ef59e7, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4528976391370532397, guid: 8aa8baed4549e644a813d282d4ef59e7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4528976391370532397, guid: 8aa8baed4549e644a813d282d4ef59e7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4528976391370532397, guid: 8aa8baed4549e644a813d282d4ef59e7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8105198636875355931, guid: 8aa8baed4549e644a813d282d4ef59e7, type: 3}
-      propertyPath: mazeManager
-      value: 
-      objectReference: {fileID: 941042667}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8aa8baed4549e644a813d282d4ef59e7, type: 3}
---- !u!4 &1308779574 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4528976391370532397, guid: 8aa8baed4549e644a813d282d4ef59e7, type: 3}
-  m_PrefabInstance: {fileID: 1308779573}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1311365529
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22807,7 +22790,7 @@ Transform:
   m_GameObject: {fileID: 1312978390}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.5, y: 14, z: 0}
+  m_LocalPosition: {x: 5.5, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23066,9 +23049,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 140285469}
     m_Modifications:
+    - target: {fileID: 126987607436439756, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
+      propertyPath: playerMove
+      value: 
+      objectReference: {fileID: 1145924945}
+    - target: {fileID: 126987607436439756, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
+      propertyPath: playerRunSkill
+      value: 
+      objectReference: {fileID: 1145924943}
     - target: {fileID: 375054590910180723, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
       propertyPath: m_Name
       value: Mud (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 375257404098606206, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2517168457466155499, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23353,9 +23348,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 140285469}
     m_Modifications:
+    - target: {fileID: 126987607436439756, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
+      propertyPath: playerMove
+      value: 
+      objectReference: {fileID: 1145924945}
+    - target: {fileID: 126987607436439756, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
+      propertyPath: playerRunSkill
+      value: 
+      objectReference: {fileID: 1145924943}
     - target: {fileID: 375054590910180723, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
       propertyPath: m_Name
       value: Mud (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 375257404098606206, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2517168457466155499, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23415,9 +23422,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 140285469}
     m_Modifications:
+    - target: {fileID: 126987607436439756, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
+      propertyPath: playerMove
+      value: 
+      objectReference: {fileID: 1145924945}
+    - target: {fileID: 126987607436439756, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
+      propertyPath: playerRunSkill
+      value: 
+      objectReference: {fileID: 1145924943}
     - target: {fileID: 375054590910180723, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
       propertyPath: m_Name
       value: Mud (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 375257404098606206, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2517168457466155499, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -42558,9 +42577,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 140285469}
     m_Modifications:
+    - target: {fileID: 126987607436439756, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
+      propertyPath: playerMove
+      value: 
+      objectReference: {fileID: 1145924945}
+    - target: {fileID: 126987607436439756, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
+      propertyPath: playerRunSkill
+      value: 
+      objectReference: {fileID: 1145924943}
     - target: {fileID: 375054590910180723, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
       propertyPath: m_Name
       value: Mud (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 375257404098606206, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2517168457466155499, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -45720,9 +45751,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 140285469}
     m_Modifications:
+    - target: {fileID: 126987607436439756, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
+      propertyPath: playerMove
+      value: 
+      objectReference: {fileID: 1145924945}
+    - target: {fileID: 126987607436439756, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
+      propertyPath: playerRunSkill
+      value: 
+      objectReference: {fileID: 1145924943}
     - target: {fileID: 375054590910180723, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
       propertyPath: m_Name
       value: Mud (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 375257404098606206, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2517168457466155499, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -46298,9 +46341,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 140285469}
     m_Modifications:
+    - target: {fileID: 126987607436439756, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
+      propertyPath: playerMove
+      value: 
+      objectReference: {fileID: 1145924945}
+    - target: {fileID: 126987607436439756, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
+      propertyPath: playerRunSkill
+      value: 
+      objectReference: {fileID: 1145924943}
     - target: {fileID: 375054590910180723, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
       propertyPath: m_Name
       value: Mud
+      objectReference: {fileID: 0}
+    - target: {fileID: 375257404098606206, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2517168457466155499, guid: ca83f070284565b4c9301d48a21814bd, type: 3}
       propertyPath: m_LocalPosition.x
