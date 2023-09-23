@@ -13,11 +13,15 @@ namespace SantaCompana
 
         [SerializeField] private Animator animator;
         [SerializeField] private string animName;
+        [SerializeField] private string animaFollowTag;
 
         private void Start()
         {
             agent.updateRotation = false;
             agent.updateUpAxis = false;
+
+            destinyAgent = GameObject.FindGameObjectWithTag("Enemy").GetComponent<NavMeshAgent>();
+            destination = GameObject.FindGameObjectWithTag(animaFollowTag).transform;
             
             animator.Play(animName);
         }

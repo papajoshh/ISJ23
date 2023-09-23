@@ -45,7 +45,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55ad7ac847bdeea4d97cd699fbed7699, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabToInstantiate: {fileID: 8551529453423122969, guid: e70c60d5a18b3344b8894ad0354b31db, type: 3}
+  prefabToInstantiate:
+  - {fileID: 8551529453423122969, guid: e70c60d5a18b3344b8894ad0354b31db, type: 3}
+  - {fileID: 2058431224455634971, guid: a44a64ec27b0ec24f99e355511516941, type: 3}
+  - {fileID: 8838999338588655260, guid: abe29b5369ae1f64484bcbca8d2d06e9, type: 3}
+  - {fileID: 2914945672816566032, guid: 9be1dd4dc03274745b9adf1b04c44edb, type: 3}
   pos: {fileID: 0}
 --- !u!114 &4043554715070067097
 MonoBehaviour:
