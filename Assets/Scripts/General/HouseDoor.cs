@@ -5,11 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class HouseDoor : MonoBehaviour
 {
+    [Header("[References]")]
+    [SerializeField] private AudioSource audiosource;
+
     [Header("[Configuration]")]
+    [SerializeField] private GameObject exteriorPosition;
+    [SerializeField] private AudioClip doorSFX;
     [SerializeField] private List<DialogScriptable> dialogList;
 
     [Header("[Values]")]
     public bool talkedToDad;
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -22,7 +28,7 @@ public class HouseDoor : MonoBehaviour
         }
         else
         {
-            StartCoroutine(FadeInConversationCorroutine());
+            StartCoroutine(Coroutine_TeleportToExterior());
         }
     }
 
@@ -33,10 +39,14 @@ public class HouseDoor : MonoBehaviour
         Player_Interactor.instance.EnableInteracting();
     }
 
-    IEnumerator FadeInConversationCorroutine()
+    IEnumerator Coroutine_TeleportToExterior()
     {
         UI_FadeCanvas.instance.Play_FadeIn();
+        audiosource.PlayOneShot(doorSFX);
+        Core.GameStateController.Instance.ChangeGameStateTo(Core.GameStateController.GameState.Pause);
         yield return new WaitForSeconds(1.5f);
+
+
         SceneManager.LoadScene("Gameplay");
     }
 }
