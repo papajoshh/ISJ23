@@ -8,6 +8,8 @@ namespace Player
 
         [SerializeField] private SimpleMovement playerMovement;
         [SerializeField] private float runSpeed;
+
+        [Header("Particle")] [SerializeField] private ParticleSystem sweatParticle;
         
         private float timePlayerCanSprint;
         private float TimePlayerCanSprint
@@ -32,11 +34,13 @@ namespace Player
             if (TimePlayerCanSprint >= sprintCooldown)
             {
                 canSprint = false;
+                sweatParticle.Play();
             }
             else if (TimePlayerCanSprint <= 0)
             {
                 TimePlayerCanSprint = 0;
                 canSprint = true;
+                sweatParticle.Stop();
             }
         }
 

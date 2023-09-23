@@ -435,13 +435,14 @@ GameObject:
   - component: {fileID: 1795473876275474200}
   - component: {fileID: 4523301523057986499}
   - component: {fileID: 5095915273013616744}
+  - component: {fileID: 4056936306397423657}
   m_Layer: 0
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3455209789546409384
 Transform:
   m_ObjectHideFlags: 0
@@ -580,6 +581,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4056936306397423657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8728731923358065062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae5ab44c0656ce34a860aec33046e1b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 1eb439ab1b3e6c849a80c1cdfaaf93c8, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &9085781579859621556
 GameObject:
   m_ObjectHideFlags: 0
