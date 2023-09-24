@@ -1,4 +1,5 @@
 using System;
+using Core;
 using UnityEngine;
 
 namespace UI
@@ -9,7 +10,7 @@ namespace UI
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (Input.GetKeyDown(KeyCode.Escape) && GameStateController.Instance.gameState == GameStateController.GameState.Gameplay)
             {
                 pausePanel.SetActive(true);
             }
