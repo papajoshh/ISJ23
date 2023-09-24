@@ -38,7 +38,7 @@ namespace SantaCompana
 
             if (StaticData.gamePhase != 0)
             {
-                normalSpeed = 2.25f;
+                normalSpeed = 2f;
             }
         }
 

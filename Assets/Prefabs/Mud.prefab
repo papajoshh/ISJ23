@@ -145,4 +145,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMove: {fileID: 0}
   playerRunSkill: {fileID: 0}
-  mugSpeed: 0.5
+  mugSpeed: 0.75
