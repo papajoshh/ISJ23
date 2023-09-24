@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: House_Phase1_Dialog 0
   m_EditorClassIdentifier: 
   characterName: Xoana
-  dialogText: "Buenos d\xEDas pai, \xBFcomo te encuentras hoy?"
+  dialogText: "Bos d\xEDas pai, \xBFc\xF3mo te encuentras hoy?\r"
   voiceSFX: {fileID: 8300000, guid: 4bf2cbd12da14e24bbe3e742e9067570, type: 3}
   characterPortrait: {fileID: 21300000, guid: 3147f4cad60cbdf43a0b2ea83c1b0e7b, type: 3}

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: House_Phase4_Dialog 2
   m_EditorClassIdentifier: 
   characterName: Xoana
-  dialogText: "Ni hablar papa! No dejar\xE9 que te vayas, no mientras yo siga aqu\xED!"
+  dialogText: "Ni hablar papa! No dejar\xE9 que te vayas, no mientras yo siga aqu\xED!\r"
   voiceSFX: {fileID: 8300000, guid: 4bf2cbd12da14e24bbe3e742e9067570, type: 3}
   characterPortrait: {fileID: 21300000, guid: 3147f4cad60cbdf43a0b2ea83c1b0e7b, type: 3}

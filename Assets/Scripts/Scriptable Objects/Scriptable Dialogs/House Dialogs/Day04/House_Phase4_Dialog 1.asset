@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: "Ant\xF3n"
   dialogText: "Filla, gracias por todos tus cuidados, siento mucho tener que despedirme
-    ya de ti...\r"
+    ya de ti...\r\r"
   voiceSFX: {fileID: 8300000, guid: 724b295a401caf64cb0987ec8d7ee9db, type: 3}
   characterPortrait: {fileID: 21300000, guid: a72dd5607b3e6d3419c80aa63a5e5793, type: 3}
