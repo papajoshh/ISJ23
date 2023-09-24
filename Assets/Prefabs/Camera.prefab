@@ -472,6 +472,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8905088845706345826, guid: 5798037038aa659468b803a82010b7e9, type: 3}
+      propertyPath: particleObj
+      value: 
+      objectReference: {fileID: 9038062801505828176}
+    - target: {fileID: 8905088845706345826, guid: 5798037038aa659468b803a82010b7e9, type: 3}
       propertyPath: rainParticle
       value: 
       objectReference: {fileID: 5180209703617331283}
@@ -488,6 +492,11 @@ Transform:
 --- !u!198 &5180209703617331283 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 7941971173119298779, guid: 5798037038aa659468b803a82010b7e9, type: 3}
+  m_PrefabInstance: {fileID: 3014106564967500936}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9038062801505828176 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6105165619905343960, guid: 5798037038aa659468b803a82010b7e9, type: 3}
   m_PrefabInstance: {fileID: 3014106564967500936}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3777331228708000561
