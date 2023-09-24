@@ -11,7 +11,7 @@ namespace Player
         public void StepSound()
         {
             int randomClip = Random.Range(0, stepsClip.Length);
-            audioSource.pitch = Random.Range(0.5f, 1f);
+            audioSource.pitch = Random.Range(0.9f, 1.1f);
             audioSource.PlayOneShot(stepsClip[randomClip]);
         }
 
