@@ -51,6 +51,7 @@ namespace Player
             else
             {
                 rb2d.velocity = Vector2.zero;
+                
             }
 
         }
@@ -103,6 +104,10 @@ namespace Player
             else
             {
                 animator.Play("IdleBlend");
+                if (GameStateController.Instance.gameState == GameStateController.GameState.Pause)
+                {
+                    animator.Play("IdleBlend");
+                }
             }
         }
 
