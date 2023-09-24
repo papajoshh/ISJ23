@@ -35,6 +35,11 @@ namespace SantaCompana
             agent.updateUpAxis = false;
 
             lastPos = transform.position;
+
+            if (StaticData.gamePhase != 0)
+            {
+                normalSpeed = 3f;
+            }
         }
 
         // Update is called once per frame
