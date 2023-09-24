@@ -1,7 +1,5 @@
 using System;
-using Core;
 using UnityEngine;
-using System;
 
 namespace Player
 {
