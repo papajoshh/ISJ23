@@ -16,9 +16,19 @@ namespace UI
             Time.timeScale = 1;
         }
 
-        public void LoadScene(string sceneName)
+        public void OnClick_Resume()
         {
-            SceneManager.LoadScene(sceneName);
+            gameObject.SetActive(false);
+        }
+
+        public void OnClick_Settings()
+        {
+            Debug.Log("(TODO) Programar opciones ingame");
+        }
+
+        public void OnClick_MainMenu()
+        {
+            SceneManager.LoadScene("Main Menu");
         }
     }
 }
