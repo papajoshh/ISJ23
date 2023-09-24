@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 1577975219773371115}
   - component: {fileID: 4965921078537334459}
   - component: {fileID: 8591095121876658841}
+  - component: {fileID: 1382202466029317469}
   m_Layer: 0
   m_Name: ActivableCruceiro
   m_TagString: Cruceiro
@@ -260,7 +261,7 @@ AudioSource:
   m_GameObject: {fileID: 6625911961076697203}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 42cfc8ee79a06ac4abeaa66a53fdd19a, type: 2}
   m_audioClip: {fileID: 8300000, guid: 9fe727f67ba32f94ea2f0a6969d67408, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.2
@@ -347,6 +348,51 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!61 &1382202466029317469
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6625911961076697203}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0114142, y: -0.5174434}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.71875, y: 1.46875}
+    newSize: {x: 0.71875, y: 1.46875}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.68070275, y: 0.4643016}
+  m_EdgeRadius: 0
 --- !u!1 &7402546105069726777
 GameObject:
   m_ObjectHideFlags: 0
