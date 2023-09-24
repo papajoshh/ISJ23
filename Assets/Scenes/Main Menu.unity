@@ -586,8 +586,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Opciones
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 02438ed8d49f0fa43ae11f55d4279183, type: 2}
-  m_sharedMaterial: {fileID: 8528505809328335564, guid: 02438ed8d49f0fa43ae11f55d4279183, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4d3e770e92e99454db00082e68a4ccf4, type: 2}
+  m_sharedMaterial: {fileID: 9023492751957771414, guid: 4d3e770e92e99454db00082e68a4ccf4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -611,7 +611,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 58.6
+  m_fontSize: 62.15
   m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -927,8 +927,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Cr\xE9ditos"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 02438ed8d49f0fa43ae11f55d4279183, type: 2}
-  m_sharedMaterial: {fileID: 8528505809328335564, guid: 02438ed8d49f0fa43ae11f55d4279183, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4d3e770e92e99454db00082e68a4ccf4, type: 2}
+  m_sharedMaterial: {fileID: 9023492751957771414, guid: 4d3e770e92e99454db00082e68a4ccf4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -952,7 +952,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 68.95
+  m_fontSize: 67.5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1061,8 +1061,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Danytec (Dani Campos) '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 02438ed8d49f0fa43ae11f55d4279183, type: 2}
-  m_sharedMaterial: {fileID: 8528505809328335564, guid: 02438ed8d49f0fa43ae11f55d4279183, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4d3e770e92e99454db00082e68a4ccf4, type: 2}
+  m_sharedMaterial: {fileID: 9023492751957771414, guid: 4d3e770e92e99454db00082e68a4ccf4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1195,8 +1195,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '[Artistas]'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 02438ed8d49f0fa43ae11f55d4279183, type: 2}
-  m_sharedMaterial: {fileID: 8528505809328335564, guid: 02438ed8d49f0fa43ae11f55d4279183, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4d3e770e92e99454db00082e68a4ccf4, type: 2}
+  m_sharedMaterial: {fileID: 9023492751957771414, guid: 4d3e770e92e99454db00082e68a4ccf4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1532,8 +1532,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "[Artista t\xE9cnico]"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 02438ed8d49f0fa43ae11f55d4279183, type: 2}
-  m_sharedMaterial: {fileID: 8528505809328335564, guid: 02438ed8d49f0fa43ae11f55d4279183, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4d3e770e92e99454db00082e68a4ccf4, type: 2}
+  m_sharedMaterial: {fileID: 9023492751957771414, guid: 4d3e770e92e99454db00082e68a4ccf4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1892,8 +1892,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Salir
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 02438ed8d49f0fa43ae11f55d4279183, type: 2}
-  m_sharedMaterial: {fileID: 8528505809328335564, guid: 02438ed8d49f0fa43ae11f55d4279183, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4d3e770e92e99454db00082e68a4ccf4, type: 2}
+  m_sharedMaterial: {fileID: 9023492751957771414, guid: 4d3e770e92e99454db00082e68a4ccf4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1917,7 +1917,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 70.95
+  m_fontSize: 69.5
   m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2150,8 +2150,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Santa Compa\xF1a"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 02438ed8d49f0fa43ae11f55d4279183, type: 2}
-  m_sharedMaterial: {fileID: 8528505809328335564, guid: 02438ed8d49f0fa43ae11f55d4279183, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4d3e770e92e99454db00082e68a4ccf4, type: 2}
+  m_sharedMaterial: {fileID: 9023492751957771414, guid: 4d3e770e92e99454db00082e68a4ccf4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2175,7 +2175,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 94.6
+  m_fontSize: 96.75
   m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2284,8 +2284,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Javier Pan Barroso
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 02438ed8d49f0fa43ae11f55d4279183, type: 2}
-  m_sharedMaterial: {fileID: 8528505809328335564, guid: 02438ed8d49f0fa43ae11f55d4279183, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4d3e770e92e99454db00082e68a4ccf4, type: 2}
+  m_sharedMaterial: {fileID: 9023492751957771414, guid: 4d3e770e92e99454db00082e68a4ccf4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2418,8 +2418,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '[Programadores]'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 02438ed8d49f0fa43ae11f55d4279183, type: 2}
-  m_sharedMaterial: {fileID: 8528505809328335564, guid: 02438ed8d49f0fa43ae11f55d4279183, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4d3e770e92e99454db00082e68a4ccf4, type: 2}
+  m_sharedMaterial: {fileID: 9023492751957771414, guid: 4d3e770e92e99454db00082e68a4ccf4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2553,8 +2553,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Guardar
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 02438ed8d49f0fa43ae11f55d4279183, type: 2}
-  m_sharedMaterial: {fileID: 8528505809328335564, guid: 02438ed8d49f0fa43ae11f55d4279183, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4d3e770e92e99454db00082e68a4ccf4, type: 2}
+  m_sharedMaterial: {fileID: 9023492751957771414, guid: 4d3e770e92e99454db00082e68a4ccf4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2743,8 +2743,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Volumen
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 02438ed8d49f0fa43ae11f55d4279183, type: 2}
-  m_sharedMaterial: {fileID: 8528505809328335564, guid: 02438ed8d49f0fa43ae11f55d4279183, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4d3e770e92e99454db00082e68a4ccf4, type: 2}
+  m_sharedMaterial: {fileID: 9023492751957771414, guid: 4d3e770e92e99454db00082e68a4ccf4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2768,7 +2768,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44
+  m_fontSize: 43.1
   m_fontSizeBase: 27
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3127,8 +3127,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Jose Antonio Rodr\xEDguez Mart\xEDn\nIsmael Valiente Maldonado"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 02438ed8d49f0fa43ae11f55d4279183, type: 2}
-  m_sharedMaterial: {fileID: 8528505809328335564, guid: 02438ed8d49f0fa43ae11f55d4279183, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4d3e770e92e99454db00082e68a4ccf4, type: 2}
+  m_sharedMaterial: {fileID: 9023492751957771414, guid: 4d3e770e92e99454db00082e68a4ccf4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3703,8 +3703,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Opciones
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 02438ed8d49f0fa43ae11f55d4279183, type: 2}
-  m_sharedMaterial: {fileID: 8528505809328335564, guid: 02438ed8d49f0fa43ae11f55d4279183, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4d3e770e92e99454db00082e68a4ccf4, type: 2}
+  m_sharedMaterial: {fileID: 9023492751957771414, guid: 4d3e770e92e99454db00082e68a4ccf4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3837,8 +3837,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "[M\xFAsica / SFX]"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 02438ed8d49f0fa43ae11f55d4279183, type: 2}
-  m_sharedMaterial: {fileID: 8528505809328335564, guid: 02438ed8d49f0fa43ae11f55d4279183, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4d3e770e92e99454db00082e68a4ccf4, type: 2}
+  m_sharedMaterial: {fileID: 9023492751957771414, guid: 4d3e770e92e99454db00082e68a4ccf4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3972,8 +3972,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Jugar
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 02438ed8d49f0fa43ae11f55d4279183, type: 2}
-  m_sharedMaterial: {fileID: 8528505809328335564, guid: 02438ed8d49f0fa43ae11f55d4279183, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4d3e770e92e99454db00082e68a4ccf4, type: 2}
+  m_sharedMaterial: {fileID: 9023492751957771414, guid: 4d3e770e92e99454db00082e68a4ccf4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3997,7 +3997,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 70.95
+  m_fontSize: 69.5
   m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4354,8 +4354,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Cr\xE9ditos"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 02438ed8d49f0fa43ae11f55d4279183, type: 2}
-  m_sharedMaterial: {fileID: 8528505809328335564, guid: 02438ed8d49f0fa43ae11f55d4279183, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4d3e770e92e99454db00082e68a4ccf4, type: 2}
+  m_sharedMaterial: {fileID: 9023492751957771414, guid: 4d3e770e92e99454db00082e68a4ccf4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4379,7 +4379,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 61.1
+  m_fontSize: 64.6
   m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4545,8 +4545,8 @@ MonoBehaviour:
   m_text: "Askarkiramo (Pablo Pav\xF3n G\xF3mez)\r\nGrey Villain (Paloma D\xEDaz
     S\xE1nchez)"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 02438ed8d49f0fa43ae11f55d4279183, type: 2}
-  m_sharedMaterial: {fileID: 8528505809328335564, guid: 02438ed8d49f0fa43ae11f55d4279183, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4d3e770e92e99454db00082e68a4ccf4, type: 2}
+  m_sharedMaterial: {fileID: 9023492751957771414, guid: 4d3e770e92e99454db00082e68a4ccf4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4570,7 +4570,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39.2
+  m_fontSize: 40
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5167,8 +5167,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Volver
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 02438ed8d49f0fa43ae11f55d4279183, type: 2}
-  m_sharedMaterial: {fileID: 8528505809328335564, guid: 02438ed8d49f0fa43ae11f55d4279183, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4d3e770e92e99454db00082e68a4ccf4, type: 2}
+  m_sharedMaterial: {fileID: 9023492751957771414, guid: 4d3e770e92e99454db00082e68a4ccf4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5192,7 +5192,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 51.05
+  m_fontSize: 49.95
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
