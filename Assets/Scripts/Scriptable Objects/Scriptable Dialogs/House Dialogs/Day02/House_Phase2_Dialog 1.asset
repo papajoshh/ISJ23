@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: "Ant\xF3n"
   dialogText: "Hija me pondr\xE9 bien, \xA1no te preocupes m\xE1s por m\xED!"
-  voiceSFX: {fileID: 8300000, guid: 28871781b0b4a8b468d9d54fd94dbe2e, type: 3}
+  voiceSFX: {fileID: 8300000, guid: 724b295a401caf64cb0987ec8d7ee9db, type: 3}
   characterPortrait: {fileID: 21300000, guid: 476a63c9a72ceeb47bd356220bcb0b64, type: 3}
