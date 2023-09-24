@@ -12,9 +12,10 @@ namespace Player
         [Header("Particle")] [SerializeField] 
         private ParticleSystem sweatParticle;
         
-        [Header("Animator")] 
+        [Header("Components")] 
         [SerializeField] private Animator animator;
         [SerializeField] private Animator nightAnimator;
+        [SerializeField] private AudioSource audioS;
         
         private float timePlayerCanSprint;
         private float TimePlayerCanSprint
@@ -40,12 +41,35 @@ namespace Player
             {
                 canSprint = false;
                 sweatParticle.Play();
+                
             }
             else if (TimePlayerCanSprint <= 0)
             {
                 TimePlayerCanSprint = 0;
                 canSprint = true;
                 sweatParticle.Stop();
+                audioS.Stop();
+            }
+            
+            ControlSound();
+        }
+
+        private bool soundOn;
+        private void ControlSound()
+        {
+            if (!canSprint)
+            {
+                if (soundOn)
+                {
+                    soundOn = false;
+                    audioS.Play();
+                    Debug.Log("music jadeo");
+                }
+            }
+            else
+            {
+                audioS.Stop();
+                soundOn = true;
             }
         }
 
