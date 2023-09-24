@@ -9,11 +9,19 @@ namespace UI
     public class PausePanel : MonoBehaviour
     {
         [Header("[References]")]
+        [SerializeField] private AudioSource audiosource;
         [SerializeField] private AudioMixer audiomixer;
         [SerializeField] private Slider volumeSlider;
 
+        [Header("[Sounds]")]
+        [SerializeField] private AudioClip enableSFX;
+        [SerializeField] private AudioClip disableSFX;
+
+
         private void OnEnable()
         {
+            audiosource.PlayOneShot(enableSFX);
+
             audiomixer.GetFloat("Master", out float currentVolume);
             volumeSlider.value = Mathf.Pow(10, currentVolume / 20);
 
@@ -24,6 +32,8 @@ namespace UI
 
         private void OnDisable()
         {
+            audiosource.PlayOneShot(disableSFX);
+
             volumeSlider.onValueChanged.RemoveListener(SetMusicVolume);
             Time.timeScale = 1;
         }
@@ -39,11 +49,6 @@ namespace UI
         public void OnClick_Resume()
         {
             gameObject.SetActive(false);
-        }
-
-        public void OnClick_Settings()
-        {
-            Debug.Log("(TODO) Programar opciones ingame");
         }
 
         public void OnClick_MainMenu()
