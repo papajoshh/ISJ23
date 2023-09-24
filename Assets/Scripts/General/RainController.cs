@@ -14,7 +14,7 @@ namespace General
         private void Update()
         {
 
-            if (SceneManager.GetActiveScene().buildIndex == 1)
+            if (SceneManager.GetActiveScene().buildIndex == 2)
             {
                 particleObj.gameObject.SetActive(false);
                 rainParticle.Stop();
