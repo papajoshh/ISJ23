@@ -218,7 +218,7 @@ MonoBehaviour:
   characterPortrait: {fileID: 6386224542151570842}
   dialogPanel: {fileID: 2283695380941709296}
   continueArrow: {fileID: 8004067127997366857}
-  characterPerSecond: 60
+  characterPerSecond: 80
   soundPerCharacter: 4
   dialogList: []
   currentDialogIndex: 0

@@ -106,7 +106,7 @@ public class UI_DialogPanel : MonoBehaviour
                 }
             }
 
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.20f);
 
             audiosource.Stop();
             typingText = false;
