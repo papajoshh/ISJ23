@@ -10,6 +10,8 @@ public class MedicinalPlant : MonoBehaviour
     [Header("[Configuration]")]
     [SerializeField] private List<DialogScriptable> firstPlantDialog;
 
+    [SerializeField] private AudioSource aSource;
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -21,6 +23,7 @@ public class MedicinalPlant : MonoBehaviour
     {
         mazeManager.OnPlantObtained();
         gameObject.SetActive(false);
+        aSource.Play();
     }
 
 }
