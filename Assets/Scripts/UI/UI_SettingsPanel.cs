@@ -7,9 +7,13 @@ using UnityEngine.UI;
 public class UI_SettingsPanel : MonoBehaviour
 {
     [Header("[References]")]
+    [SerializeField] private AudioSource audiosource;
     [SerializeField] private AudioMixer audiomixer;
     [SerializeField] private Slider volumeSlider;
     [SerializeField] private GameObject mainMenuPanel;
+
+    [Header("[Sounds]")]
+    [SerializeField] private AudioClip disableSFX;
 
 
     private void OnEnable()
@@ -35,6 +39,8 @@ public class UI_SettingsPanel : MonoBehaviour
 
     public void OnClick_Save()
     {
+        audiosource.PlayOneShot(disableSFX);
+
         mainMenuPanel.SetActive(true);
         gameObject.SetActive(false);
     }
