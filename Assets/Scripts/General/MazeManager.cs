@@ -26,6 +26,7 @@ public class MazeManager : MonoBehaviour
 
     [Header("[Events]")]
     [SerializeField] private GameEvent spawnEnemy;
+    [SerializeField] private GameEvent pjSpriteEvent;
 
     [Header("[Values]")]
     [SerializeField] public int plantsObtained;
