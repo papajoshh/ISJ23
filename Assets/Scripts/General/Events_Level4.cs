@@ -53,31 +53,7 @@ public class Events_Level4 : MonoBehaviour
     public void Play_Ending()
     {
         Core.GameStateController.Instance.ChangeGameStateTo(Core.GameStateController.GameState.Pause);
-        StartCoroutine(Coroutine_PlayEnding());
-
-        IEnumerator Coroutine_PlayEnding()
-        {
-            UI_DialogPanel.instance.onEndDialog += Show_EndingCredits;
-            UI_ScreamerCanvas.instance.ShowScreamerImage();
-            yield return new WaitForSeconds(1);
-            
-            UI_DialogPanel.instance.ShowDialog(santaCompañaDialog);
-        }
-    }
-
-    private void Show_EndingCredits()
-    {
-        UI_DialogPanel.instance.onEndDialog -= Show_EndingCredits;
-
-        StartCoroutine(Coroutine_ShowCredits());
-
-        IEnumerator Coroutine_ShowCredits()
-        {
-            UI_FadeCanvas.instance.Play_FadeIn();
-            yield return new WaitForSeconds(3);
-
-            creditsCanvas.Play_Credits();
-        }
+        creditsCanvas.Play_NextEndingPhase();
     }
 
     private void OnEndDialog()
