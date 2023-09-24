@@ -7581,6 +7581,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: SimplePlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 7839580494640669783, guid: e6c09c4bc63e6c1449d109660af7e2b2, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 42cfc8ee79a06ac4abeaa66a53fdd19a, type: 2}
+    - target: {fileID: 8894913422279228587, guid: e6c09c4bc63e6c1449d109660af7e2b2, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 42cfc8ee79a06ac4abeaa66a53fdd19a, type: 2}
+    - target: {fileID: 8918364300802543294, guid: e6c09c4bc63e6c1449d109660af7e2b2, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 42cfc8ee79a06ac4abeaa66a53fdd19a, type: 2}
     - target: {fileID: 8955330451430420014, guid: e6c09c4bc63e6c1449d109660af7e2b2, type: 3}
       propertyPath: m_Enabled
       value: 1
