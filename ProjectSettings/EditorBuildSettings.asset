@@ -11,19 +11,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Gameplay.unity
     guid: a57d9845ca133714c94c1b3346e2a88c
-  - enabled: 0
-    path: Assets/Scenes/Javi/Gameplay S.unity
-    guid: 99135a63f6b8f004d80750b09050b158
-  - enabled: 0
-    path: Assets/Scenes/Gameplay Bosque_OLD.unity
-    guid: e87873fdb385e9246b71c3399b7dcd5c
-  - enabled: 0
-    path: Assets/Scenes/Ismael/Ismael.unity
-    guid: a6e9d543619ba614ebb4d2e0af766583
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 0
-    path: Assets/Scenes/Ismael/Gameplay Test Ismael.unity
-    guid: cca01e545dcf1c7449eb7e2b4d32b7a3
   m_configObjects: {}
