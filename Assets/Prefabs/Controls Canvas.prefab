@@ -88,7 +88,7 @@ CanvasGroup:
   m_GameObject: {fileID: 800812813364919606}
   m_Enabled: 1
   m_Alpha: 0
-  m_Interactable: 1
+  m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!1 &832205480183718170
@@ -1369,7 +1369,7 @@ CanvasGroup:
   m_GameObject: {fileID: 7287755376907556441}
   m_Enabled: 1
   m_Alpha: 0
-  m_Interactable: 1
+  m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!1 &7293787436154693377
@@ -1540,7 +1540,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: -0.27924043, y: -0.1776083}
   m_AnchorMax: {x: 0.42090705, y: 0.36464533}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -74}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8071545536146853314

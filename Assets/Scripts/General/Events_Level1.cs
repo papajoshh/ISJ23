@@ -31,7 +31,7 @@ public class Events_Level1 : MonoBehaviour
             UI_FadeCanvas.instance.Play_FadeOut();
             yield return new WaitForSeconds(2);
 
-            UI_DialogPanel.instance.onEndDialog += OnEndDialog;
+            UI_DialogPanel.instance.onEndDialog += OnEndIntroDialog;
             UI_DialogPanel.instance.ShowDialog(levelIntroDialog);
         }
     }
@@ -57,11 +57,24 @@ public class Events_Level1 : MonoBehaviour
     {
         UI_DialogPanel.instance.onEndDialog += OnEndDialog;
         UI_DialogPanel.instance.ShowDialog(thirdPlantDialog);
+        UI_ControlsPanel.instance.HideAll();
+    }
+
+    private void OnEndIntroDialog()
+    {
+        UI_DialogPanel.instance.onEndDialog -= OnEndIntroDialog;
+        Core.GameStateController.Instance.ChangeGameStateTo(Core.GameStateController.GameState.Gameplay);
+        Invoke(nameof(Show_AdvancedControls), 2);
     }
 
     private void OnEndDialog()
     {
         UI_DialogPanel.instance.onEndDialog -= OnEndDialog;
         Core.GameStateController.Instance.ChangeGameStateTo(Core.GameStateController.GameState.Gameplay);
+    }
+
+    private void Show_AdvancedControls()
+    {
+        UI_ControlsPanel.instance.Show_AdvancedControls();
     }
 }
