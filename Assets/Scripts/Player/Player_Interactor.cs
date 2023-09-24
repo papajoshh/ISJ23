@@ -42,7 +42,12 @@ public class Player_Interactor : MonoBehaviour
                 Interact();
             }
         }
+        
+        ActiveStuffs();
+        
     }
+
+    private GameObject alertObj;
 
     private void Interact()
     {
@@ -56,6 +61,35 @@ public class Player_Interactor : MonoBehaviour
             hit.transform.gameObject.GetComponent<IInteractable>().Interact();
         }
 
+        Debug.DrawLine(transform.position, transform.position + (facingDirection * rayLenght), Color.red);
+    }
+    
+    private void ActiveStuffs()
+    {
+        var facingDirection = new Vector3(playerMovement.faceDirection.x, playerMovement.faceDirection.y);
+
+        RaycastHit2D hit = Physics2D.Raycast(gameObject.transform.position, facingDirection, rayLenght, interactableLayer);
+
+        if (hit.collider != null)
+        {
+            GameObject newAlertObj = hit.transform.GetChild(0).gameObject;
+
+            // Si el objeto aún no está activado, actívalo y actualiza la variable booleana
+            if (!newAlertObj.activeSelf)
+            {
+                newAlertObj.SetActive(true);
+                alertObj = newAlertObj; // Actualiza la referencia
+            }
+        }
+        else
+        {
+            // Si el objeto está activado, desactívalo y actualiza la variable booleana
+            if (alertObj != null && alertObj.activeSelf)
+            {
+                alertObj.SetActive(false);
+            }
+        }
+        
         Debug.DrawLine(transform.position, transform.position + (facingDirection * rayLenght), Color.red);
     }
 
