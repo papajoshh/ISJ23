@@ -178,6 +178,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mazeManager: {fileID: 0}
+  coll2D: {fileID: 4704137803490824870}
+  spriteRenderer: {fileID: 2193267103073624222}
   firstPlantDialog:
   - {fileID: 11400000, guid: 6d88eef4a96400944963e84d2a83f4f4, type: 2}
   aSource: {fileID: 6464531873816261370}
