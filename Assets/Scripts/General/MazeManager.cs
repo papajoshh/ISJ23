@@ -50,6 +50,7 @@ public class MazeManager : MonoBehaviour
 
         if(plantsObtained == plantsNeeded -1)
         {
+            pjSpriteEvent.Raise();
             dayTime.SetActive(false);
             nightTime.SetActive(true);
             spawnEnemy.Raise();

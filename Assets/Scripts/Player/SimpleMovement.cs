@@ -38,8 +38,9 @@ namespace Player
             if (GameStateController.Instance.gameState == GameStateController.GameState.Gameplay)
             {
                 PlayerInputsValues();
-                PlayerAnimationController();
             }
+            
+            PlayerAnimationController();
         }
 
         private void FixedUpdate()
@@ -51,7 +52,7 @@ namespace Player
             else
             {
                 rb2d.velocity = Vector2.zero;
-                
+                movement = Vector2.zero;//Temporal
             }
 
         }
@@ -104,10 +105,6 @@ namespace Player
             else
             {
                 animator.Play("IdleBlend");
-                if (GameStateController.Instance.gameState == GameStateController.GameState.Pause)
-                {
-                    animator.Play("IdleBlend");
-                }
             }
         }
 
