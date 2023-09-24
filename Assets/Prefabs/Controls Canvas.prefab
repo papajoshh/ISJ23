@@ -11,13 +11,14 @@ GameObject:
   - component: {fileID: 2294811473211367951}
   - component: {fileID: 4343532700570174089}
   - component: {fileID: 4481415191027131340}
+  - component: {fileID: 188765886838728985}
   m_Layer: 5
   m_Name: Advanced Controls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2294811473211367951
 RectTransform:
   m_ObjectHideFlags: 0
@@ -78,6 +79,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!225 &188765886838728985
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800812813364919606}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &832205480183718170
 GameObject:
   m_ObjectHideFlags: 0
@@ -1006,6 +1019,8 @@ GameObject:
   - component: {fileID: 6834275021974319421}
   - component: {fileID: 2693895983817937982}
   - component: {fileID: 5066981277976058382}
+  - component: {fileID: 7304809342909631209}
+  - component: {fileID: 5102271089048097676}
   m_Layer: 5
   m_Name: Controls Canvas
   m_TagString: Untagged
@@ -1097,6 +1112,40 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!95 &7304809342909631209
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6803134388312529090}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5b0cb59545d0979449437026de99c28d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5102271089048097676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6803134388312529090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87ac1540f45a9ab4594fa69073b4c004, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controlsAnimator: {fileID: 7304809342909631209}
 --- !u!1 &7110561865614898720
 GameObject:
   m_ObjectHideFlags: 0
@@ -1242,13 +1291,14 @@ GameObject:
   - component: {fileID: 8708286168158218270}
   - component: {fileID: 6390500668025597293}
   - component: {fileID: 7393867812577139468}
+  - component: {fileID: 3265697188850310593}
   m_Layer: 5
   m_Name: Basic Controls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8708286168158218270
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1310,6 +1360,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!225 &3265697188850310593
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7287755376907556441}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &7293787436154693377
 GameObject:
   m_ObjectHideFlags: 0
