@@ -1,23 +1,29 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 namespace General
 {
     public class RainController : MonoBehaviour
     {
 
-        [SerializeField] private ParticleSystem particleSystem;
+        [SerializeField] private ParticleSystem rainParticle;
 
-
+        private void Start()
+        {
+            rainParticle.Stop();
+        }
+        
         private void Update()
         {
-            if (StaticData.gamePhase >= 2)
+            if (StaticData.gamePhase >= 3)
             {
-                particleSystem.Play();
+                rainParticle.Play();
             }
-            else
+            else if (SceneManager.GetActiveScene().buildIndex == 0)
             {
-                particleSystem.Stop();
+                rainParticle.Stop();
             }
         }
     }
