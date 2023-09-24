@@ -459,6 +459,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lluviapart
       objectReference: {fileID: 0}
+    - target: {fileID: 7941971173119298779, guid: 5798037038aa659468b803a82010b7e9, type: 3}
+      propertyPath: lengthInSec
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7941971173119298779, guid: 5798037038aa659468b803a82010b7e9, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7941971173119298779, guid: 5798037038aa659468b803a82010b7e9, type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8905088845706345826, guid: 5798037038aa659468b803a82010b7e9, type: 3}
       propertyPath: rainParticle
       value: 

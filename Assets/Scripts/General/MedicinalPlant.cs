@@ -8,6 +8,7 @@ public class MedicinalPlant : MonoBehaviour
     [SerializeField] private MazeManager mazeManager;
     [SerializeField] private Collider2D coll2D;
     [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private GameObject particleObj;
 
     [Header("[Configuration]")]
     [SerializeField] private List<DialogScriptable> firstPlantDialog;
@@ -27,6 +28,7 @@ public class MedicinalPlant : MonoBehaviour
         mazeManager.OnPlantObtained();
         coll2D.enabled = false;
         spriteRenderer.enabled = false;
+        particleObj.SetActive(false);
     }
 
 }

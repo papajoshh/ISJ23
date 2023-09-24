@@ -180,6 +180,7 @@ MonoBehaviour:
   mazeManager: {fileID: 0}
   coll2D: {fileID: 4704137803490824870}
   spriteRenderer: {fileID: 2193267103073624222}
+  particleObj: {fileID: 8686208840592328879}
   firstPlantDialog:
   - {fileID: 11400000, guid: 6d88eef4a96400944963e84d2a83f4f4, type: 2}
   aSource: {fileID: 6464531873816261370}
@@ -359,5 +360,10 @@ PrefabInstance:
 --- !u!4 &1489524168498523122 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4146446829551977574, guid: b88c53aecf7621d48996011fc55bd5aa, type: 3}
+  m_PrefabInstance: {fileID: 3251872961967894420}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8686208840592328879 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6173139665056835387, guid: b88c53aecf7621d48996011fc55bd5aa, type: 3}
   m_PrefabInstance: {fileID: 3251872961967894420}
   m_PrefabAsset: {fileID: 0}
