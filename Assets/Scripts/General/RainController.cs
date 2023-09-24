@@ -17,13 +17,13 @@ namespace General
         
         private void Update()
         {
-            if (StaticData.gamePhase >= 3)
-            {
-                rainParticle.Play();
-            }
-            else if (SceneManager.GetActiveScene().buildIndex == 0)
+            if (SceneManager.GetActiveScene().buildIndex == 0)
             {
                 rainParticle.Stop();
+            }
+            else if (StaticData.gamePhase >= 3)
+            {
+                rainParticle.Play();
             }
         }
     }
