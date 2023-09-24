@@ -12,6 +12,7 @@ namespace Core
         {
             if (Input.GetKeyDown(KeyCode.G))
             {
+                Debug.Log("test bake");
                 BuildNaveMesh();
             }
         }

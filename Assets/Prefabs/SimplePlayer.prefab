@@ -363,7 +363,7 @@ GameObject:
   - component: {fileID: 8699050148160564838}
   - component: {fileID: 5235686677067983674}
   - component: {fileID: 5515143280035554878}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CameraEffectController
   m_TagString: Untagged
   m_Icon: {fileID: 0}

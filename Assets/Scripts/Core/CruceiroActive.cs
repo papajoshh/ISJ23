@@ -7,21 +7,24 @@ namespace Core
 {
     public class CruceiroActive : MonoBehaviour
     {
-
-        [SerializeField] private GameObject cruceiro;
+        
         [SerializeField] private GameEvent cruceiroEvent;
 
         private void OnTriggerEnter2D(Collider2D col)
         {
-            Player_DropBread.instance.gameObject.GetComponent<Player.PlayerDead>().SetLastCruceiro(gameObject);
-            cruceiro.SetActive(true);
-            cruceiroEvent.Raise();
+            if (col.gameObject.CompareTag("Player"))
+            {
+                Player_DropBread.instance.gameObject.GetComponent<Player.PlayerDead>().SetLastCruceiro(gameObject);
+                cruceiroEvent.Raise();
+            }
         }
 
         private void OnTriggerExit2D(Collider2D other)
         {
-            cruceiro.SetActive(false);
-            cruceiroEvent.Raise();
+            if (other.gameObject.CompareTag("Player"))
+            {
+                cruceiroEvent.Raise();
+            }
         }
         
     }
