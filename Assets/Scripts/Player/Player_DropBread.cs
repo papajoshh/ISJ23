@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,10 +12,12 @@ public class Player_DropBread : MonoBehaviour
     [SerializeField] private GameObject breadPrefab;
 
     [Header("[Configuration]")]
-    [SerializeField] private int initialAmount;
+    [SerializeField] private float timeColdown;
 
     [Header("[Values]")]
-    [SerializeField] private int currentAmount;
+    [SerializeField] private float currentTime;
+
+    private bool canDropBread;
 
 
     private void Awake()
@@ -33,27 +36,37 @@ public class Player_DropBread : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        currentTime = 0f;
+        canDropBread = true;
+    }
+
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Z) && GameStateController.Instance.gameState == GameStateController.GameState.Gameplay)
+        if (!canDropBread)
         {
-            DropBread();
+            currentTime += Time.deltaTime;
+            if (currentTime > timeColdown)
+            {
+                canDropBread = true;
+                currentTime = 0;
+            }
+        }
+        
+        if(Input.GetKeyDown(KeyCode.E) && GameStateController.Instance.gameState == GameStateController.GameState.Gameplay)
+        {
+            if (canDropBread)
+            {
+                DropBread();
+                canDropBread = false;
+            }
         }
     }
 
     private void DropBread()
     {
-        if(currentAmount > 0)
-        {
-            currentAmount--;
-            Instantiate(breadPrefab, gameObject.transform.position, Quaternion.identity);
-        }
+        Instantiate(breadPrefab, gameObject.transform.position, Quaternion.identity);
     }
 
-    public void RestoreBreadAmount()
-    {
-        currentAmount = initialAmount;
-    }
-
-    
 }

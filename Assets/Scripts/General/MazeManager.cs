@@ -34,7 +34,7 @@ public class MazeManager : MonoBehaviour
 
     private void Start()
     {
-        Player_DropBread.instance.RestoreBreadAmount();
+        //Player_DropBread.instance.RestoreBreadAmount();
         Player_DropBread.instance.gameObject.transform.position = initialPlayerPosition.transform.position;
         cameraConfiner.m_BoundingShape2D = levelConfiner;
         navMeshSurface.BuildNavMesh();
