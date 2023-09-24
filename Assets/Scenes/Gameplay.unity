@@ -24099,10 +24099,6 @@ PrefabInstance:
       propertyPath: initialAmount
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 7137297291771137038, guid: e6c09c4bc63e6c1449d109660af7e2b2, type: 3}
-      propertyPath: reductionRate
-      value: 0.085
-      objectReference: {fileID: 0}
     - target: {fileID: 7839580494640669783, guid: e6c09c4bc63e6c1449d109660af7e2b2, type: 3}
       propertyPath: OutputAudioMixerGroup
       value: 
@@ -81299,7 +81295,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4984257871625800217, guid: 67346bbc2192e104f9836a03cc4f842f, type: 3}
       propertyPath: orthographic size
-      value: 3.265625
+      value: 3.2109375
       objectReference: {fileID: 0}
     - target: {fileID: 4984257871625800217, guid: 67346bbc2192e104f9836a03cc4f842f, type: 3}
       propertyPath: m_NormalizedViewPortRect.x

@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   farolLigth: {fileID: 8955330451430420014}
-  reductionRate: 0.075
+  reductionRate: 0.085
   intensityValue: 1
   outerValue: 3
   wastingLigth: 1
@@ -776,7 +776,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   breadPrefab: {fileID: 8709943596628097010, guid: e6b100c6215cc5f4c860e6a3c8d467be, type: 3}
-  timeColdown: 3
+  timeColdown: 1.5
   currentTime: 0
 --- !u!114 &2647594331323155362
 MonoBehaviour:
