@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 822a0a79a6b822b4baefe2b309786cf8, type: 3}
   m_Name: House_Phase2_Dialog 2
   m_EditorClassIdentifier: 
-  characterName: Hija
+  characterName: Xoana
   dialogText: "Bajar\xE9 al r\xEDo a por cola de caballo y diente de le\xF3n, \xA1eso
     bajar\xE1 la infecci\xF3n!"
   voiceSFX: {fileID: 8300000, guid: 4bf2cbd12da14e24bbe3e742e9067570, type: 3}

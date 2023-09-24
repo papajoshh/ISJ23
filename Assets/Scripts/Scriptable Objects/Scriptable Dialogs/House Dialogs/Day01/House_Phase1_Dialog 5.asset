@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: House_Phase1_Dialog 5
   m_EditorClassIdentifier: 
   characterName: "Ant\xF3n"
-  dialogText: "No salgas que me pondr\xE9 bien queridi\xF1a"
+  dialogText: "No salgas que me pondr\xE9 bien queridi\xF1a."
   voiceSFX: {fileID: 8300000, guid: 724b295a401caf64cb0987ec8d7ee9db, type: 3}
   characterPortrait: {fileID: 21300000, guid: 9becc3de0000a20429ee138ecdd34061, type: 3}

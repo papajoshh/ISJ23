@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: House_Phase1_Dialog 4
   m_EditorClassIdentifier: 
   characterName: Xoana
-  dialogText: "Non te preocupes pai, conozco bien el bosque y no me da ning\xFAn
+  dialogText: "\xA1Non te preocupes pai, conozco bien el bosque y no me da ning\xFAn
     miedo\u2026!\r"
   voiceSFX: {fileID: 8300000, guid: 4bf2cbd12da14e24bbe3e742e9067570, type: 3}
   characterPortrait: {fileID: 21300000, guid: 3147f4cad60cbdf43a0b2ea83c1b0e7b, type: 3}
