@@ -9,26 +9,19 @@ namespace General
     {
 
         [SerializeField] private ParticleSystem rainParticle;
+        [SerializeField] private GameObject particleObj;
 
-        private void Start()
-        {
-            rainParticle.Stop();
-        }
-        
         private void Update()
         {
 
-            if (Input.GetKeyDown(KeyCode.F3))
+            if (SceneManager.GetActiveScene().buildIndex == 1)
             {
-                StaticData.gamePhase += 1;
-            }
-            
-            if (SceneManager.GetActiveScene().buildIndex == 0)
-            {
+                particleObj.gameObject.SetActive(false);
                 rainParticle.Stop();
             }
             else if (StaticData.gamePhase >= 2)
             {
+                particleObj.gameObject.SetActive(true);
                 rainParticle.Play();
             }
         }
