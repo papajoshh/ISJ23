@@ -24017,6 +24017,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4029315870355327948, guid: e6c09c4bc63e6c1449d109660af7e2b2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5235686677067983674, guid: e6c09c4bc63e6c1449d109660af7e2b2, type: 3}
       propertyPath: virtualCamera
       value: 
@@ -24027,6 +24031,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6240083109538405428, guid: e6c09c4bc63e6c1449d109660af7e2b2, type: 3}
       propertyPath: isDay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6324032817036076923, guid: e6c09c4bc63e6c1449d109660af7e2b2, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6575229440670397656, guid: e6c09c4bc63e6c1449d109660af7e2b2, type: 3}

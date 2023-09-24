@@ -25,8 +25,6 @@ namespace Player
         [HideInInspector]
         public Vector2 faceDirection;
 
-        private bool isMoving;
-
         private void Start()
         {
             normalSpeed = speed;
@@ -86,12 +84,8 @@ namespace Player
             {
                 faceDirection.x = movement.x;
                 faceDirection.y = movement.y;
-                isMoving = true;
             }
-            else
-            {
-                isMoving = false;
-            }
+
         }
 
         private void PlayerAnimation(Animator animator)
