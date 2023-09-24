@@ -219,7 +219,7 @@ MonoBehaviour:
   dialogPanel: {fileID: 2283695380941709296}
   continueArrow: {fileID: 8004067127997366857}
   characterPerSecond: 80
-  soundPerCharacter: 4
+  soundPerCharacter: 8
   dialogList: []
   currentDialogIndex: 0
   typingText: 0
