@@ -7,19 +7,12 @@ namespace Core
     public class NavMeshControllerBake : MonoBehaviour
     {
         [SerializeField] private NavMeshSurface navMeshSurface;
-
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.G))
-            {
-                Debug.Log("test bake");
-                BuildNaveMesh();
-            }
-        }
+        
 
         public void BuildNaveMesh()
         {
-            navMeshSurface.BuildNavMesh();
+            //navMeshSurface.BuildNavMesh();
+            Debug.Log("Build Nave Mesh only debug");
         }
     }
 }
