@@ -15,11 +15,6 @@ public class UI_MainMenuPanel : MonoBehaviour
     [SerializeField] private AudioClip disableSFX;
 
 
-    public void OnClick_Play()
-    {
-        SceneManager.LoadScene("Gameplay Casa");
-    }
-
     public void OnClick_Settings()
     {
         audiosource.PlayOneShot(enableSFX);

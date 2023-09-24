@@ -25,6 +25,6 @@ public class MainMenuStartEvent : MonoBehaviour
 
     public void LoadGameplay()
     {
-        SceneManager.LoadScene("Gameplay");
+        SceneManager.LoadScene("Gameplay Casa");
     }
 }
