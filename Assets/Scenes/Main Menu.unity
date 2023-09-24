@@ -349,6 +349,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b97d18a90ef3edf4a9b572bfdc3d89d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audiomixer: {fileID: 24100000, guid: 42cfc8ee79a06ac4abeaa66a53fdd19a, type: 2}
+  volumeSlider: {fileID: 1286553050}
   mainMenuPanel: {fileID: 928642981}
 --- !u!1001 &108503853
 PrefabInstance:
@@ -1217,7 +1219,7 @@ AudioSource:
   m_GameObject: {fileID: 317064649}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 42cfc8ee79a06ac4abeaa66a53fdd19a, type: 2}
   m_audioClip: {fileID: 8300000, guid: 042b9c0f4423ed343930c8104908a555, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
