@@ -7,17 +7,21 @@ public class UI_EndingCredits : MonoBehaviour
 {
     [Header("[References]")]
     [SerializeField] private AudioSource audiosourceMusica;
-    [SerializeField] private AudioSource audiosourceSFX;
+    [SerializeField] private AudioSource screamerAudioSource;
+    [SerializeField] private AudioSource thunderAudioSource;
+    [SerializeField] private AudioSource compañaAudiosource;
     [SerializeField] private Animator endingAnimator;
     [SerializeField] private GameObject endingPanel;
 
     [Header("[Sounds]")]
     [SerializeField] private AudioClip endingMusic;
+    [SerializeField] private AudioClip thunderSFX;
     [SerializeField] private AudioClip screamerSFX;
 
 
     public void Play_Ending()
     {
+        compañaAudiosource.Stop();
         endingPanel.SetActive(true);
         endingAnimator.Play("ENDING");
     }
@@ -29,7 +33,8 @@ public class UI_EndingCredits : MonoBehaviour
 
     public void Play_ScreamerSFX()
     {
-        audiosourceSFX.PlayOneShot(screamerSFX);
+        screamerAudioSource.PlayOneShot(screamerSFX);
+        thunderAudioSource.PlayOneShot(thunderSFX);
     }
 
     public void Load_MainMenu()
