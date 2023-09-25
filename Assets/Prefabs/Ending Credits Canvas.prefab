@@ -1698,6 +1698,7 @@ MonoBehaviour:
   audiosourceMusica: {fileID: 7832317965757647732}
   screamerAudioSource: {fileID: 6979572532551647906}
   thunderAudioSource: {fileID: 2657262219250559884}
+  "compa\xF1aAudiosource": {fileID: 0}
   endingAnimator: {fileID: 4518014338498873859}
   endingPanel: {fileID: 6576241255745143085}
   endingMusic: {fileID: 8300000, guid: 042b9c0f4423ed343930c8104908a555, type: 3}
@@ -2947,7 +2948,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Askarkiramo (Pablo Pav\xF3n G\xF3mez)"
+  m_text: "Askar Kiramo (Pablo Pav\xF3n G\xF3mez)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4d3e770e92e99454db00082e68a4ccf4, type: 2}
   m_sharedMaterial: {fileID: 9023492751957771414, guid: 4d3e770e92e99454db00082e68a4ccf4, type: 2}
