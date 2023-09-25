@@ -3125,7 +3125,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Jose Antonio Rodr\xEDguez Mart\xEDn\nIsmael Valiente Maldonado"
+  m_text: "Jose Antonio Rodr\xEDguez Mart\xEDn\nWolfbyte (Ismael Valiente Maldonado)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4d3e770e92e99454db00082e68a4ccf4, type: 2}
   m_sharedMaterial: {fileID: 9023492751957771414, guid: 4d3e770e92e99454db00082e68a4ccf4, type: 2}
