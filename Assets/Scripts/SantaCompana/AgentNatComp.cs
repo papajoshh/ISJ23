@@ -47,8 +47,13 @@ namespace SantaCompana
         {
             if (GameStateController.Instance.gameState == GameStateController.GameState.Gameplay)
             {
+                agent.isStopped = false;
                 AgentFollow(EnemyDestination());
                 //AgentDistance(player);
+            }
+            else
+            {
+                agent.isStopped = true;
             }
             
             ChangeAgentSpeed();
