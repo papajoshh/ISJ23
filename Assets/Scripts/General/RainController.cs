@@ -19,7 +19,7 @@ namespace General
                 particleObj.gameObject.SetActive(false);
                 rainParticle.Stop();
             }
-            else if (StaticData.gamePhase >= 2)
+            else if (StaticData.gamePhase >= 2 && SceneManager.GetActiveScene().buildIndex != 2)
             {
                 particleObj.gameObject.SetActive(true);
                 rainParticle.Play();
