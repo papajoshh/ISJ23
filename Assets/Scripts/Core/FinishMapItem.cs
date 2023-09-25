@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using System.Collections;
 
 namespace Core
 {
@@ -25,8 +26,7 @@ namespace Core
         {
             if(mazeManager.plantsObtained >= 4)
             {
-                StaticData.gamePhase++;
-                SceneManager.LoadScene(sceneName);
+                FinishLevel();
             }
             else
             {
@@ -35,6 +35,21 @@ namespace Core
             }
         }
 
+
+        private void FinishLevel()
+        {
+            StaticData.gamePhase++;
+            GameStateController.Instance.ChangeGameStateTo(GameStateController.GameState.Pause);
+            StartCoroutine(Coroutine_FinishLevel());
+
+            IEnumerator Coroutine_FinishLevel()
+            {
+                UI_FadeCanvas.instance.Play_FadeIn();
+                yield return new WaitForSeconds(2);
+
+                SceneManager.LoadScene(sceneName);
+            }
+        }
 
         private void OnEndExitDialog()
         {
