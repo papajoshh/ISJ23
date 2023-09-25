@@ -63,7 +63,6 @@ namespace Player
                 {
                     soundOn = false;
                     audioS.Play();
-                    Debug.Log("music jadeo");
                 }
             }
             else
