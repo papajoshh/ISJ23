@@ -53,7 +53,7 @@ public class Events_Level4 : MonoBehaviour
     public void Play_Ending()
     {
         Core.GameStateController.Instance.ChangeGameStateTo(Core.GameStateController.GameState.Pause);
-        creditsCanvas.Play_NextEndingPhase();
+        creditsCanvas.Play_Ending();
     }
 
     private void OnEndDialog()
@@ -61,8 +61,5 @@ public class Events_Level4 : MonoBehaviour
         UI_DialogPanel.instance.onEndDialog -= OnEndDialog;
         Core.GameStateController.Instance.ChangeGameStateTo(Core.GameStateController.GameState.Gameplay);
     }
-
-
-
 
 }
