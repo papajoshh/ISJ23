@@ -755,14 +755,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebe73b8047159fc498f8af0a81eb71bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ExhaustAudiosource: {fileID: 8918364300802543294}
+  playerDayAnimator: {fileID: 1550526699701376946}
+  playerNightAnimator: {fileID: 8158819632351739128}
   playerMovement: {fileID: 6240083109538405428}
-  runSpeed: 3
   sweatParticle: {fileID: 2792123180640297454}
-  animator: {fileID: 1550526699701376946}
-  nightAnimator: {fileID: 8158819632351739128}
-  audioS: {fileID: 8918364300802543294}
-  sprintCooldown: 1.9
-  isOnMug: 0
+  sprintSpeed: 2.5
+  maxSprintTime: 3
+  playerTotalTimeSprinting: 0
+  isPlayerSprinting: 0
+  isPlayerExhausted: 0
+  playerOnMud: 0
 --- !u!114 &6575229440670397656
 MonoBehaviour:
   m_ObjectHideFlags: 0

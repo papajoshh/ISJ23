@@ -7,7 +7,7 @@ namespace Core
     public class MudTerrain : MonoBehaviour
     {
         [SerializeField] private SimpleMovement playerMove;
-        [SerializeField] private PlayerRunSkill playerRunSkill;
+        [SerializeField] private Player_Sprint playerRunSkill;
         [SerializeField] private float mugSpeed;
 
 
@@ -17,7 +17,7 @@ namespace Core
             {
                 //playerMove.normalSpeed = mugSpeed;
                 playerMove.speed = mugSpeed;
-                playerRunSkill.isOnMug = true;
+                playerRunSkill.playerOnMud = true;
             }
         }
 
@@ -26,7 +26,7 @@ namespace Core
             if (other.gameObject.CompareTag("Player"))
             {
                 playerMove.speed = playerMove.normalSpeed;
-                playerRunSkill.isOnMug = false;
+                playerRunSkill.playerOnMud = false;
             }
         }
     }
