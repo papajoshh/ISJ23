@@ -9,13 +9,20 @@ namespace Core
     {
         
         [SerializeField] private GameEvent cruceiroEvent;
+        [SerializeField] private bool onCruceiro = false;
 
         private void OnTriggerEnter2D(Collider2D col)
         {
-            if (col.gameObject.CompareTag("Player"))
+
+        }
+
+        private void OnTriggerStay2D(Collider2D other)
+        {
+            if (other.gameObject.CompareTag("Player") && !onCruceiro)
             {
                 Player_DropBread.instance.gameObject.GetComponent<Player.PlayerDead>().SetLastCruceiro(gameObject);
                 cruceiroEvent.Raise();
+                onCruceiro = true;
             }
         }
 
@@ -24,6 +31,7 @@ namespace Core
             if (other.gameObject.CompareTag("Player"))
             {
                 cruceiroEvent.Raise();
+                onCruceiro = false;
             }
         }
         
