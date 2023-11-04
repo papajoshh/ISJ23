@@ -1,4 +1,3 @@
-using System;
 using Core;
 using UnityEngine;
 
@@ -24,36 +23,35 @@ namespace Player
 
         [HideInInspector]
         public Vector2 faceDirection;
-
+        #region Unity Events
         private void Start()
         {
             normalSpeed = speed;
         }
-
         // Update is called once per frame
         void Update()
         {
-            if (GameStateController.Instance.gameState == GameStateController.GameState.Gameplay)
+            if (IsPlaying())
             {
                 PlayerInputsValues();
             }
-            
             PlayerAnimationController();
         }
 
         private void FixedUpdate()
         {
-            if (GameStateController.Instance.gameState == GameStateController.GameState.Gameplay)
+            if (IsPlaying())
             {
-                CanMove();
+                PlayerMove();
             }
             else
             {
-                rb2d.velocity = Vector2.zero;
-                movement = Vector2.zero;//Temporal
+                ResetMovement();
             }
-
         }
+
+        
+        #endregion
 
         private void PlayerInputsValues()
         {
@@ -62,25 +60,41 @@ namespace Player
             CheckFaceDirection();
         }
 
-        private void CanMove()
+        private void PlayerMove()
         {
-            PlayerMoveImprove();
-        }
+            Vector2 accelRate = GetAccelRate(GetTargetSpeed());
+            Vector2 speedDif = GetSpeedDif(GetTargetSpeed());
+            Vector2 rate = GetRate(accelRate, speedDif);
 
-        private void PlayerMoveImprove()
-        {
-            Vector2 targetSpeed = new Vector2(movement.x, movement.y).normalized * speed;
-            Vector2 accelRate = new Vector2((Mathf.Abs(targetSpeed.x) > 0.01f) ? runAccelAmount : runDeccelAmount,
-                (Mathf.Abs(targetSpeed.y) > 0.01f) ? runAccelAmount : runDeccelAmount);
-            Vector2 speedDif = new Vector2(targetSpeed.x - rb2d.velocity.x, targetSpeed.y - rb2d.velocity.y);
-            Vector2 rate = new Vector2(speedDif.x * accelRate.x, speedDif.y * accelRate.y);
-            
             rb2d.AddForce(rate, ForceMode2D.Force);
         }
+        private Vector2 GetTargetSpeed()
+        {
+            return new Vector2(movement.x, movement.y).normalized * speed;
+        }
+        private Vector2 GetAccelRate(Vector2 targetSpeed)
+        {
+            float xAcceleration = (Mathf.Abs(targetSpeed.x) > 0.01f) ? runAccelAmount : runDeccelAmount;
+            float yAcceleration = (Mathf.Abs(targetSpeed.y) > 0.01f) ? runAccelAmount : runDeccelAmount;
+            return new Vector2(xAcceleration, yAcceleration);
+        }
+        private Vector2 GetSpeedDif(Vector2 targetSpeed)
+        {
+            return new Vector2(targetSpeed.x - rb2d.velocity.x, targetSpeed.y - rb2d.velocity.y);
+        }
+        private static Vector2 GetRate(Vector2 accelRate, Vector2 speedDif)
+        {
+            return new Vector2(speedDif.x * accelRate.x, speedDif.y * accelRate.y);
+        }
 
+        private void ResetMovement()
+        {
+            rb2d.velocity = Vector2.zero;
+            movement = Vector2.zero;//Temporal
+        }
         private void CheckFaceDirection()
         {
-            if(movement != Vector2.zero)
+            if (PlayerIsMoving())
             {
                 faceDirection.x = movement.x;
                 faceDirection.y = movement.y;
@@ -88,37 +102,57 @@ namespace Player
 
         }
 
+        private bool PlayerIsMoving()
+        {
+            return movement.magnitude != 0;
+        }
+
         private void PlayerAnimation(Animator animator)
         {
-            if (movement.magnitude != 0)
+            if (PlayerIsMoving())
             {
-                animator.SetFloat("Horizontal", movement.x);
-                animator.SetFloat("Vertical", movement.y);
-                animator.Play("Movement");
+                SetFloatAnimator(animator, "Horizontal", movement.x);
+                SetFloatAnimator(animator, "Vertical", movement.y);
+                PlayAnim(animator, "Movement");
             }
             else
             {
-                animator.Play("IdleBlend");
+                PlayAnim(animator, "IdleBlend");
             }
         }
 
-        private void SpritePlayerOn(GameObject spriteOn, GameObject spriteOff)
+        private static void PlayAnim(Animator animator, string _clipAnimation)
         {
-            spriteOn.SetActive(true);
-            spriteOff.SetActive(false);
+            animator.Play(_clipAnimation);
+        }
+
+        private void SetFloatAnimator(Animator animator, string _label, float _value)
+        {
+            animator.SetFloat(_label, _value);
         }
 
         private void PlayerAnimationController()
         {
-            if (isDay)
+            Animator animToPlay = GetPlayerAnimator(isDay);
+            PlayerAnimation(animToPlay);
+            ActivatePlayer(isDay);
+        }
+
+        private void ActivatePlayer(bool _isDay)
+        {
+            dayPlayer.SetActive(_isDay);
+            nigthPlayer.SetActive(!_isDay);
+        }
+
+        private Animator GetPlayerAnimator(bool _isDay)
+        {
+            if (_isDay)
             {
-                PlayerAnimation(dayAnim);
-                SpritePlayerOn(dayPlayer, nigthPlayer);
+                return dayAnim;
             }
             else
             {
-                PlayerAnimation(nigthAnim);
-                SpritePlayerOn(nigthPlayer, dayPlayer);
+                return nigthAnim;
             }
         }
 
@@ -126,6 +160,11 @@ namespace Player
         {
             isDay =! isDay;
         }
-        
+
+        private static bool IsPlaying()
+        {
+            return GameStateController.Instance.gameState == GameStateController.GameState.Gameplay;
+        }
+
     }
 }

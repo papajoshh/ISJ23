@@ -1,10 +1,10 @@
-using System;
 using UnityEngine;
 
 namespace Player
 {
     public class PlayerRunSkill : MonoBehaviour
     {
+        public bool isOnMug;
 
         [SerializeField] private SimpleMovement playerMovement;
         [SerializeField] private float runSpeed;
@@ -26,7 +26,8 @@ namespace Player
         [SerializeField] private float sprintCooldown;
 
         private bool canSprint;
-        public bool isOnMug;
+        private bool soundOn;
+        
         
         private void Start()
         {
@@ -36,25 +37,32 @@ namespace Player
         private void Update()
         {
             SprintSkill();
-
-            if (TimePlayerCanSprint >= sprintCooldown)
+            canSprint = !SprintIsBlocked() && CanSprint();
+            if (SprintIsBlocked())
             {
-                canSprint = false;
                 sweatParticle.Play();
-                
             }
-            else if (TimePlayerCanSprint <= 0)
+            else if (CanSprint())
             {
                 TimePlayerCanSprint = 0;
-                canSprint = true;
                 sweatParticle.Stop();
                 audioS.Stop();
             }
-            
+
             ControlSound();
         }
 
-        private bool soundOn;
+        private bool CanSprint()
+        {
+            return TimePlayerCanSprint <= 0;
+        }
+
+        private bool SprintIsBlocked()
+        {
+            return TimePlayerCanSprint >= sprintCooldown;
+        }
+
+        
         private void ControlSound()
         {
             if (!canSprint)
@@ -74,37 +82,73 @@ namespace Player
 
         private void SprintSkill()
         {
-            if (Input.GetKey(KeyCode.LeftShift) && TimePlayerCanSprint < sprintCooldown)
+            if (IsPressingSkillKey() && !SprintIsBlocked())
             {
                 if (canSprint)
                 {
-                    animator.speed = 2f;
-                    nightAnimator.speed = 2f;
-                    TimePlayerCanSprint += Time.deltaTime;
-
-                    if (isOnMug)
-                        playerMovement.speed = runSpeed / 2;
-                    else
-                        playerMovement.speed = runSpeed;
+                    RunSprintSkill();
                 }
-
             }
             else//perdón
             {
-                if (!isOnMug)
-                {
-                    animator.speed = 1f;
-                    nightAnimator.speed = 1f;
-                    playerMovement.speed = playerMovement.normalSpeed;
-                    TimePlayerCanSprint -= Time.deltaTime;
-                }
-                else
-                {
-                    playerMovement.speed = 0.5f;
-                    TimePlayerCanSprint -= Time.deltaTime;
-                }
- 
+                DoStandardRun();
             }
+        }
+
+        private void DoStandardRun()
+        {
+            if (!isOnMug)
+            {
+                SetAnimatorSpeed(1f);
+            }
+            SetPlayerMovementSpeed(GetSurfaceStandarSpeed());
+            TimePlayerCanSprint -= Time.deltaTime;
+        }
+
+        private void RunSprintSkill()
+        {
+            SetAnimatorSpeed(2f);
+            TimePlayerCanSprint += Time.deltaTime;
+            SetPlayerMovementSpeed(GetSurfaceSprintSpeed());
+        }
+
+        private float GetSurfaceSprintSpeed()
+        {
+            float speedToSet;
+            if (isOnMug)
+                speedToSet = runSpeed / 2;
+            else
+                speedToSet = runSpeed;
+            return speedToSet;
+        }
+        private float GetSurfaceStandarSpeed()
+        {
+            float speedToSet;
+            if (!isOnMug)
+            {
+                speedToSet = playerMovement.normalSpeed;
+            }
+            else
+            {
+                speedToSet = 0.5f;
+            }
+            return speedToSet;
+        }
+
+        private static bool IsPressingSkillKey()
+        {
+            return Input.GetKey(KeyCode.LeftShift);
+        }
+
+        private void SetPlayerMovementSpeed(float _speed)
+        {
+            playerMovement.speed = _speed;
+        }
+
+        private void SetAnimatorSpeed(float _speed)
+        {
+            animator.speed = _speed;
+            nightAnimator.speed = _speed;
         }
     }
 }
